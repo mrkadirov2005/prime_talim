@@ -3,10 +3,10 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import {Routes,Route,BrowserRouter} from "react-router-dom"
 import Home from './pages/Home'
-import Courses from './pages/Courses'
-import Videos from './pages/Videos'
 import Test from './pages/Test'
 import AboutUs from './pages/AboutUs'
+import VCourses from './pages/VCourses'
+import Courses from './pages/Courses'
 function App() {
 
 
@@ -14,12 +14,12 @@ function App() {
     <BrowserRouter>
     
     <Header/>
-    <main className='min-h-screen h-fit flex flex-col items-center justify-between md:pt-20'>
+    <main className='min-h-screen h-fit flex flex-col items-center justify-between'>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/about' element={<AboutUs/>}></Route>
+      <Route path='/videos' element={<VCourses/>}></Route>
       <Route path='/courses' element={<Courses/>}></Route>
-      <Route path='/videos' element={<Videos/>}></Route>
       <Route path='/test' element={<Test/>}></Route>
     </Routes>
     </main>

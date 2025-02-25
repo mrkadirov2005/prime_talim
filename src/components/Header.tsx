@@ -12,7 +12,7 @@ export default function Header() {
       <img src="/logo.png" className="w-16 sm:w-20" alt="Logo" />
 
       {/* Desktop Navigation */}
-      <nav className="hidden sm:flex w-[40%] items-center justify-between uppercase text-white font-semibold">
+      <nav className="hidden sm:flex sm:w-[60%] w-[40%] items-center sm:text-sm md:text-xl justify-between uppercase text-white font-semibold">
         <Link to="/">Asosiy</Link>
         <Link to="/courses">Kurslar</Link>
         <Link to="/about">Biz haqimizda</Link>
