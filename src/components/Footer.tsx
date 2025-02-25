@@ -1,7 +1,5 @@
-import React from "react";
 import {Button} from "@mui/material"
 import { Link } from "react-router-dom";
-import { FaMapMarkerAlt } from "react-icons/fa";
 import "./responsive.css"
 export default function Footer() {
 	return (

@@ -1,5 +1,4 @@
 import { Button } from '@mui/material'
-import React from 'react'
 import Card from '../components/Card'
 import Item_Card from '../components/Item_Card'
 import Class from '../components/Class'

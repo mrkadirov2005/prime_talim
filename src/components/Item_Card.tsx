@@ -1,4 +1,3 @@
-import React from 'react'
 import "./responsive.css"
 interface Props{
     heading:string,
