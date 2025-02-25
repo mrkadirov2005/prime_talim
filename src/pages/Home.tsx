@@ -78,7 +78,7 @@ export default function Home() {
     <input className='w-[100%] p-2 border-2 border-white py-2 text-white bg-gray-700' type="number" placeholder='Telefon raqamingizni kiriting' />  
     <select className='w-full border-2 border-white p-2' name="school" id="school">
         <option value={undefined} selected disabled>--Maktabingizni tanlang:</option>
-        {[1,2,3,4,5,6,7,8,9,10,11,"Tugatganman"].map((item,index)=><option className='option bg-gray-900' value={item}>{item}</option>)}
+        {[1,2,3,4,5,6,7,8,9,10,11,"Tugatganman"].map((item)=><option className='option bg-gray-900' value={item}>{item}</option>)}
     </select>
     <input className='w-[100%] p-2 border-2 border-white py-2 text-white bg-gray-700' type="number" placeholder='Maktabingizni raqamini kiriting: ' />  
     <input className='w-[100%] p-2 border-2 border-white py-2 text-white bg-gray-700' type="number" placeholder='telefon raqamingizni kiriting' />  
