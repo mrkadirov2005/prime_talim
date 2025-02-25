@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
     
     <Header/>
-    <main className='min-h-screen h-fit flex flex-col items-center justify-between pt-20'>
+    <main className='min-h-screen h-fit flex flex-col items-center justify-between md:pt-20'>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/about' element={<AboutUs/>}></Route>

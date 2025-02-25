@@ -66,3 +66,74 @@
         width: 90%;
     }
   }
+
+
+
+  @media only screen and (max-width: 400px) {
+    header{
+        padding: 3px;
+        margin: 0;
+        display: flex;
+        width: 100%;
+    }
+    
+    .header_nav{
+        display: none;
+    }
+    .header_buttons{
+        width: fit-content;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .card{
+        width: 100px;
+        height: 100px;
+    }
+    .card>h1{
+        font-size:12px;
+    }
+    .card>img{
+        width: 35px;
+    }
+    /* comfort items */
+    .comfort_item{
+        padding: 7px;
+        margin: 0;
+        width: 350px !important;
+        height: fit-content;
+        background-image:linear-gradient(rgb(99, 65, 3),rgb(235, 159, 18));
+        margin-bottom: 8px;
+    }
+    .comfort_item>h1{
+        font-size: 12px;
+        background-image:linear-gradient(rgb(235, 159, 18),rgb(99, 65, 3));
+        border-radius:8px;
+        color:white;
+    }
+    /* Class */
+    .main_class_item{
+        width: 80vw;
+        background-image: linear-gradient(pink,orange);
+        color:black;
+    }
+    .main_class_item>h1{
+        font-size: 12px;
+    }
+    /* footer */
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        padding:10px 0;
+        gap: 10px;
+        background-image: linear-gradient(orange,rgb(17, 11, 1));
+    }
+    footer>div,nav{
+        width: 80%;
+    }
+    footer>div>p{
+        width: 90%;
+    }
+  }
