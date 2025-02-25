@@ -1,0 +1,51 @@
+@media only screen and (max-width: 600px) {
+.main_main_img{
+    width: 100vw;
+    height: 300px;
+}
+.main_main_img>h1{
+    font-size: 25px;
+}
+.main_main_img>p{
+    font-size: 10px;
+}
+
+  /* results */
+  .results_part{
+    width: 100%;
+  }
+  .results_part>h1{
+    font-size: 18px;
+  }
+  .results_part>div{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* comforts part */
+  .main_comforts{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .main_comforts>h1{
+    font-size: 18px;
+  }
+  /* courses */
+  .main_courses{
+    width: 100vw;
+  }
+  .main_courses>h1{
+    font-size: 18px;
+  }
+  .main_courses>div{
+    background-image: linear-gradient(orange,blue, orange);
+  }
+
+  /* contact */
+  .main_contact{
+    width: 100vw;
+  }
+  .main_contact>form{
+    width: 100vw;
+  }
+  }
