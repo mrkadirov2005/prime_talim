@@ -12,16 +12,16 @@ export default function Header() {
       <img src="/logo.png" className="w-16 sm:w-20" alt="Logo" />
 
       {/* Desktop Navigation */}
-      <nav className="hidden sm:flex sm:w-[60%] w-[40%] items-center sm:text-sm md:text-xl justify-between uppercase text-white font-semibold">
-        <Link to="/">Asosiy</Link>
-        <Link to="/courses">Kurslar</Link>
-        <Link to="/about">Biz haqimizda</Link>
-        <Link to="/videos">Video darslar</Link>
-        <Link to="/test">Sinov Testi</Link>
+      <nav className="nav_wrapper hidden sm:flex sm:w-[60%] w-[40%] items-center sm:text-sm md:text-xl justify-between uppercase text-white font-semibold">
+        <Link className="header_links shadow-2xl shadow-gray-950"  to="/">Asosiy</Link>
+        <Link className="header_links shadow-2xl shadow-gray-950" to="/courses">Kurslar</Link>
+        <Link className="header_links shadow-2xl shadow-gray-950" to="/about">Biz haqimizda</Link>
+        <Link className="header_links shadow-2xl shadow-gray-950" to="/videos">Video darslar</Link>
+        <Link className="header_links shadow-2xl shadow-gray-950" to="/test">Sinov Testi</Link>
       </nav>
 
       {/* Buttons (Hidden on mobile) */}
-      <div className="hidden sm:flex w-[15%] items-center justify-between">
+      <div id="header_buttons" className="  hidden sm:flex w-[15%] items-center justify-between">
         <Button variant="contained">Login</Button>
         <Button variant="contained">Contact</Button>
       </div>

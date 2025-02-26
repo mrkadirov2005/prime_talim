@@ -1,8 +1,9 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
 .main_main_img{
     width: 100vw;
     height: 300px;
 }
+
 .main_main_img>h1{
     font-size: 25px;
 }
@@ -48,6 +49,32 @@
   .main_contact>form{
     width: 100vw;
   }
+  /* courses-videos part */
+  .courses_main_lsn{
+    flex-direction: column;
+  }
+  .courses_heading{
+    font-size: 20px;
+  }
+  .CEO_responsive, .data_responsive,.data_responsive>div,.CEO_responsive>div{
+    width: 90vw;
+    margin: 0;
+    padding: 10px;
+    font-size: 15px;
+    margin: 20px 0;
+  }
+  .data_item{
+    width: 90%;
+    margin: auto;
+    margin-top:5px ;
+  }
+  .data_item>h1{
+    font-size: 18px !important;
+
+  }
+  /* .data_responsive{
+    
+  } */
   }
 
 
@@ -103,7 +130,16 @@
       .main_contact>form{
         width: 100vw;
       }
+      /* courses */
+      .courses_main_lsn{
+        flex-direction: column;
       }
-    
+      .courses_heading{
+        font-size: 18px;
+      }
+
+    }
+      
+    /* courses */
 
 

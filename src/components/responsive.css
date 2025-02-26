@@ -1,4 +1,10 @@
-@media only screen and (max-width: 800px) {
+.header_links{
+    font-size: 15px;
+    background-image:linear-gradient(orange, rgb(6, 6, 6));
+    padding: 10px; 
+    border-radius:5px;
+}
+@media only screen and (max-width: 1000px) {
     header{
         padding: 5px;
         margin: 0;
@@ -8,13 +14,27 @@
     
     .header_nav{
         display: none;
-        font-size: 12px;
+        font-size: 8px;
     }
     .header_buttons{
         width: fit-content;
         display: flex;
         gap: 15px;
         flex-direction: column;
+    }
+    .nav_wrapper{
+        width: 60%;
+    }
+    .header_links{
+        font-size: 12px;
+    }
+    #header_buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    #header_buttons>button{
+        font-size: 12px; 
+        margin: 2px;
     }
     .card{
         width: 120px;
@@ -66,9 +86,33 @@
     footer>div>p{
         width: 90%;
     }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        padding:10px 0;
+        gap: 10px;
+        background-image: linear-gradient(orange,rgb(17, 11, 1));
+    }
+    footer>div,nav{
+        width: 80%;
+    }
+    footer>div>p{
+        width: 90%;
+    }
   }
 
 
+@media only screen and (max-width: 600px) { 
+    .header_buttons{
+        width: fit-content;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+}
 
   @media only screen and (max-width: 400px) {
     header{
@@ -77,16 +121,15 @@
         display: flex;
         width: 100%;
     }
+    .header_buttons{
+        display: none !important;
+        background-color: green;
+    }
     
     .header_nav{
         display: none;
     }
-    .header_buttons{
-        width: fit-content;
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-    }
+    
     .card{
         width: 100px;
         height: 100px;
@@ -121,20 +164,7 @@
     .main_class_item>h1{
         font-size: 12px;
     }
+
     /* footer */
-    footer{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        padding:10px 0;
-        gap: 10px;
-        background-image: linear-gradient(orange,rgb(17, 11, 1));
-    }
-    footer>div,nav{
-        width: 80%;
-    }
-    footer>div>p{
-        width: 90%;
-    }
+    
   }
