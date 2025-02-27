@@ -16,7 +16,7 @@
         display: none;
         font-size: 8px;
     }
-    .header_buttons{
+    #header_buttons{
         width: fit-content;
         display: flex;
         gap: 15px;
@@ -163,6 +163,24 @@
     }
     .main_class_item>h1{
         font-size: 12px;
+    }
+    /* courses_item-card component */
+    .card_item_course{
+        display: flex;
+        width: 80vw;
+        font-size: 18px;
+
+    }
+    .card_item_course>h1{
+        font-size: 15px;
+        width: 60%;
+    }
+    .course_card_description{
+        font-size: 15px;
+        width: 90%;
+    }
+    #header_buttons>button{
+        display: none !important;
     }
 
     /* footer */
