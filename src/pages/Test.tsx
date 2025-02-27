@@ -1,4 +1,3 @@
-import { Card } from "@mui/material";
 import { FaHeading } from "react-icons/fa";
 
 export default function Test() {
