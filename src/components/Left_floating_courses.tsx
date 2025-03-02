@@ -39,7 +39,7 @@ export default function LeftFloatingCourses({
             {item}
           </Button>
         ))}
-        <a className="w-full">Aloqaga Chiqish</a>
+        <Button color="primary" variant="contained" className="w-full"><a href="/test">Aloqaga Chiqish</a></Button>
       </div>
     </Card>
   );

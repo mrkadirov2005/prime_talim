@@ -145,7 +145,7 @@ export default function SEB() {
   }
 
   return (
-    <div className={`bg-gradient-to-bl ${!isRegistered?"fixed w-screen h-screen z-50 overflow-hidden":" w-screen h-fit absolute"} from-indigo-500 to-purple-700 min-h-screen flex items-center justify-center px-4`}>
+    <div className={`bg-gradient-to-bl seb_browser ${!isRegistered?"fixed w-screen h-screen  overflow-hidden":" w-screen h-fit absolute"} from-indigo-500 to-purple-700 min-h-screen flex items-center justify-center px-4`}>
       {!isRegistered ? (
         <Card className="w-full  max-w-md p-6 rounded-xl shadow-2xl text-white bg-white/10 backdrop-blur-lg">
           <h2 className="text-2xl font-bold text-center text-white">Ro'yxatdan o'tish</h2>
@@ -153,6 +153,9 @@ export default function SEB() {
             <TextField label="Ismingizni kiriting" variant="outlined" fullWidth className="bg-white rounded-md" />
             <TextField label="Familiyangizni kiriting" variant="outlined" fullWidth className="bg-white rounded-md" />
             <TextField label="Maktabingizni kiriting" type="number" variant="outlined" fullWidth className="bg-white rounded-md" />
+            <TextField label="Sinfingizni kiriting" type="number" variant="outlined" fullWidth className="bg-white rounded-md" />
+            <TextField label="Telefon raqamingizni kiriting" type="number" variant="outlined" fullWidth className="bg-white rounded-md" />
+
             <Select
               value={option}
               onChange={(e) => setOption(e.target.value)}

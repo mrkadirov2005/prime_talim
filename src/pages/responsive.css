@@ -82,7 +82,7 @@
 
   @media only screen and (max-width: 400px) {
     .courses_heading{
-      padding: 15px;
+      padding: 1px;
     }
     .main_main_img{
         width: 100vw;
@@ -141,6 +141,9 @@
         font-size: 18px;
       }
 
+    }
+    .seb_browser{
+      z-index: 1001;
     }
       
 

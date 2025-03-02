@@ -49,7 +49,7 @@ export default function Home() {
           Bizning Natijalar
         </motion.h1>
         <motion.div variants={staggerContainer} className="flex md:flex-wrap  w-[90%] pt-10">
-            <motion.div variants={slideUp} className="flex justify-center gap-5 flex-wrap">
+            <motion.div variants={slideUp} className="flex justify-center gap-5 md:justify-between w-full flex-wrap">
               <Card source="/reading.svg" field={"O'quvchilar"} number={700} />
               <Card source="/reading.svg" field={"Ustozlar"} number={20} />
               <Card source="/reading.svg" field={"IELTS"} number={30} />

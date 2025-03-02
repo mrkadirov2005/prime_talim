@@ -130,7 +130,7 @@ export default function Courses() {
         {/* SIDE PANEL */}
         {isBarOpen && (
           <motion.div
-            className="fixed top-[80px] right-0 h-screen bg-white/90 shadow-lg p-4 backdrop-blur-md rounded-l-lg"
+            className="fixed top-[80px] right-0  sm:top-0  md:top-[80px] bg-white/90 shadow-lg p-4 backdrop-blur-md rounded-l-lg"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
