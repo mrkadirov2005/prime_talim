@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Course_card from "../components/Course_card";
 import "./responsive.css";
 import Left_floating_courses, { PROPS } from "../components/Left_floating_courses";
@@ -70,51 +71,90 @@ const courses = [
     key: 8,
   },
 ];
-
-
 export default function Courses() {
-  const [data,setData]=useState(courses);
-  const [isBarOpen,setIsBarOpen]=useState<boolean>();
-  const [levels,setLevels]=useState<PROPS>({
-    name: "IQ",
-    description: "Mantiqiy va analitik fikrlashni rivojlantirish mashg'ulotlari.",
-    levels: ["Asosiy", "Orta", "Murakkab"],
-    price: "270",
-    teacher: "Rustam",
-    key: 8,
-  }) ;
-  
-  const handleInputSearch=(e: React.ChangeEvent<HTMLInputElement>)=>{
-    const value:string=e.target.value as string;
-    const sd=courses.filter(item=>item.name.toLowerCase()==value || item.description.includes(value) || item.levels.includes(value));
-    setData(sd);
-  }
+  const [data, setData] = useState(courses);
+  const [isBarOpen, setIsBarOpen] = useState<boolean>(false);
+  const [levels, setLevels] = useState<PROPS>(courses[0]);
 
-	return (
-		<section className="flex flex-col  items-center justify-start w-full min-h-screen  bg-gradient-to-tr from-orange-500 to-gray">
-			<div className="w-full flex items-center justify-center text-white text-3xl bg-gradient-to-tr from-orange-950 to-gray-900 min-h-[100px]">
-				<h1 className="courses_heading">Kursni tanlang va o'z joyingizni band qiling.</h1>
-			</div>
-      <input type="text" onChange={handleInputSearch} placeholder="Qidirish" className="w-[300px] text-white bg-gray-500 mt-10 border-2 border-gray-900 px-2 py-1 rounded-md shadow-2xl shadow-amber-950" />
-			<div className="pb-10 courses_main_lsn items-center justify-center w-full gap-10 mt-10 flex flex-wrap">
-				{data.map((item,index)=><div className="w-fit" onClick={()=>{
-          setIsBarOpen(!isBarOpen)
-          setLevels(item)
-        }}><Course_card
-					name={item.name}
-					description={item.description}
-					index={index}
-					levels={item.levels}
-					price={item.price}
-					teacher={item.price}
-					key={1}
-				></Course_card></div>)}
-        {isBarOpen?<div className=" fixed top-[80px] right-0 h-screen">
-          <Button variant="contained" color="error" className="w-full p-2"  onClick={()=>setIsBarOpen(!isBarOpen)}>X</Button>
-          <Left_floating_courses name={levels.name} description={levels.description} key={levels.key} levels={levels.levels} price={levels.price} teacher={levels.teacher} ></Left_floating_courses>
-        </div>:" "}
-			
-			</div>
-		</section>
-	);
+  const handleInputSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value: string = e.target.value.toLowerCase();
+    const filteredData = courses.filter(
+      (item) =>
+        item.name.toLowerCase().includes(value) ||
+        item.description.toLowerCase().includes(value) ||
+        item.levels.some((level) => level.toLowerCase().includes(value))
+    );
+    setData(filteredData);
+  };
+
+  return (
+    <section className="flex flex-col items-center justify-start w-full min-h-screen bg-gradient-to-br from-[#FF7E5F] to-[#6A82FB]">
+      {/* HEADER */}
+      <div className="w-full flex items-center justify-center text-white text-3xl bg-gradient-to-tr from-orange-900 to-blue-900 min-h-[100px] shadow-md">
+        <h1 className="courses_heading">Kursni tanlang va o'z joyingizni band qiling.</h1>
+      </div>
+
+      {/* SEARCH BAR */}
+      <motion.input
+        type="text"
+        onChange={handleInputSearch}
+        placeholder="Qidirish"
+        className="w-[300px] text-white bg-white/20 mt-8 border border-white px-3 py-2 rounded-lg placeholder-white focus:ring-2 focus:ring-white focus:outline-none"
+        whileFocus={{ scale: 1.05 }}
+      />
+
+      {/* COURSES LIST */}
+      <div className="pb-10 courses_main_lsn items-center justify-center w-full gap-8 mt-10 flex flex-wrap">
+        {data.map((item, index) => (
+          <motion.div
+            key={item.key}
+            className="w-fit cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              setIsBarOpen(!isBarOpen);
+              setLevels(item);
+            }}
+          >
+            <Course_card
+              name={item.name}
+              description={item.description}
+              index={index}
+              levels={item.levels}
+              price={item.price}
+              teacher={item.teacher}
+            />
+          </motion.div>
+        ))}
+
+        {/* SIDE PANEL */}
+        {isBarOpen && (
+          <motion.div
+            className="fixed top-[80px] right-0 h-screen bg-white/90 shadow-lg p-4 backdrop-blur-md rounded-l-lg"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 200, damping: 20 }}
+          >
+            <Button
+              variant="contained"
+              color="error"
+              className="w-full p-2 mb-2"
+              onClick={() => setIsBarOpen(!isBarOpen)}
+            >
+              X
+            </Button>
+            <Left_floating_courses
+              name={levels.name}
+              description={levels.description}
+              key={levels.key}
+              levels={levels.levels}
+              price={levels.price}
+              teacher={levels.teacher}
+            />
+          </motion.div>
+        )}
+      </div>
+    </section>
+  );
 }

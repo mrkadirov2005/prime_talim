@@ -1,5 +1,4 @@
-const Tests_I_q={
-    "test": [
+[
       {
         "id": 0,
         "level": "IQ:Daraja 1",
@@ -213,6 +212,3 @@ const Tests_I_q={
         "answer": "38"
       }
     ]
-  }
-  
-  export default Tests_I_q

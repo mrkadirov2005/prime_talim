@@ -1,4 +1,4 @@
-const history = [
+[
     {
       "level": "A1",
       "question": "Qadimgi odamlar qanday uy-joylarda yashagan?",
@@ -119,6 +119,4 @@ const history = [
       "options": ["1943-yil", "1945-yil", "1941-yil", "1950-yil"],
       "answer": "1945-yil"
     }
-];
-
-export default history;
+]

@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi"; // Import hamburger & close icons
@@ -7,43 +7,55 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-orange-500 h-20 z-20 w-full flex items-center justify-between px-6 sm:px-20 shadow-2xl shadow-amber-800 relative">
+    <header id="header" className="bg-gradient-to-r from-orange-500 to-blue-400 h-20 z-20 w-full flex items-center justify-between px-6 sm:px-20 shadow-xl shadow-blue-600 relative">
       {/* Logo */}
       <img src="/logo.png" className="w-16 sm:w-20" alt="Logo" />
 
       {/* Desktop Navigation */}
-      <nav className="nav_wrapper hidden sm:flex sm:w-[60%] w-[40%] items-center sm:text-sm md:text-xl justify-between uppercase text-white font-semibold">
-        <Link className="header_links shadow-2xl shadow-gray-950"  to="/">Asosiy</Link>
-        <Link className="header_links shadow-2xl shadow-gray-950" to="/courses">Kurslar</Link>
-        <Link className="header_links shadow-2xl shadow-gray-950" to="/about">Biz haqimizda</Link>
-        <Link className="header_links shadow-2xl shadow-gray-950" to="/videos">Video darslar</Link>
-        <Link className="header_links shadow-2xl shadow-gray-950" to="/test">Sinov Testi</Link>
+      <nav className="hidden sm:flex sm:w-[60%] items-center sm:text-sm md:text-lg justify-between uppercase text-white font-semibold">
+        {["/", "/courses", "/about", "/videos", "/test"].map((route) => (
+          <Link
+            key={route}
+            className="transition-transform hover:scale-110 hover:text-gray-200 duration-200"
+            to={route}
+          >
+            {route === "/" ? "Asosiy" : route.replace("/", "").toUpperCase()}
+          </Link>
+        ))}
       </nav>
 
       {/* Buttons (Hidden on mobile) */}
-      <div id="header_buttons" className="  hidden sm:flex w-[15%] items-center justify-between">
-        <Button variant="contained">Login</Button>
-        <Button variant="contained">Contact</Button>
+      <div className="hidden sm:flex w-[15%] items-center justify-between">
+        {/* <Button variant="contained" color="primary" className="hover:scale-110 transition-transform">Login</Button> */}
+        <Button variant="contained" color="error" className="hover:scale-110 transition-transform"><a href="#contact">Aloqaga chiqish</a></Button>
       </div>
 
       {/* Hamburger Button (Mobile) */}
-      <button className="sm:hidden text-white text-3xl" onClick={() => setMenuOpen(!menuOpen)}>
+      <button
+        className="sm:hidden text-white text-3xl transition-transform hover:scale-110"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         {menuOpen ? <HiX /> : <HiMenuAlt3 />}
       </button>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-20 left-0 w-full bg-orange-600 flex flex-col items-center gap-5 p-5 text-white font-semibold sm:hidden">
-          <Link className="border-2 border-orange-950 w-full text-center hover:scale-115" to="/" onClick={() => setMenuOpen(false)}>Asosiy</Link>
-          <Link className="border-2 border-orange-950 w-full text-center hover:scale-115" to="/about" onClick={() => setMenuOpen(false)}>Biz haqimizda</Link>
-          <Link className="border-2 border-orange-950 w-full text-center hover:scale-115" to="/courses" onClick={() => setMenuOpen(false)}>Kurslar</Link>
-          <Link className="border-2 border-orange-950 w-full text-center hover:scale-115" to="/videos" onClick={() => setMenuOpen(false)}>Video darslar</Link>
-          <Link className="border-2 border-orange-950 w-full text-center hover:scale-115" to="/test" onClick={() => setMenuOpen(false)}>Sinov Testi</Link>
+        <div className="absolute top-20 left-0 w-full bg-orange-500 bg-opacity-90 rounded-b-xl shadow-lg shadow-blue-600 flex flex-col items-center gap-5 p-5 text-white font-semibold sm:hidden">
+          {["/", "/about", "/courses", "/videos", "/test"].map((route) => (
+            <Link
+              key={route}
+              className="border-b-2 border-white pb-1 w-full text-center transition-transform hover:scale-105"
+              to={route}
+              onClick={() => setMenuOpen(false)}
+            >
+              {route === "/" ? "Asosiy" : route.replace("/", "").toUpperCase()}
+            </Link>
+          ))}
 
           {/* Buttons inside mobile menu */}
           <div className="flex flex-col gap-2 w-full">
-            <Button variant="contained" fullWidth>Login</Button>
-            <Button variant="contained" fullWidth>Contact</Button>
+            {/* <Button variant="contained" color="primary" fullWidth className="hover:scale-105">Login</Button> */}
+            <Button variant="contained" color="error" fullWidth className="hover:scale-105">Contact</Button>
           </div>
         </div>
       )}

@@ -1,4 +1,4 @@
- const  tests= [
+[
     {
       "level": "A1",
       "question": "which is the correct sentence?",
@@ -120,5 +120,3 @@
       "answer": "I regret to tell you that the flight is canceled."
     }
   ]
-
-  export default tests

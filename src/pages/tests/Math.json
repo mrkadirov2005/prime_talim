@@ -1,4 +1,4 @@
-const math_tests=[
+[
   {
     "level": "A1",
     "question": "15 + 28 nechta?",
@@ -126,4 +126,3 @@ const math_tests=[
     "answer": "141.3 sm³"
   }
 ]
-export default math_tests

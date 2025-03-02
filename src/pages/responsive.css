@@ -81,6 +81,9 @@
 
 
   @media only screen and (max-width: 400px) {
+    .courses_heading{
+      padding: 15px;
+    }
     .main_main_img{
         width: 100vw;
         height: 300px;
@@ -140,6 +143,5 @@
 
     }
       
-    /* courses */
 
 

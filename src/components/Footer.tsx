@@ -1,38 +1,92 @@
-import {Button} from "@mui/material"
 import { Link } from "react-router-dom";
-import "./responsive.css"
-export default function Footer() {
-	return (
-		<footer className="bg-orange-500 min-h-[400px] w-screen flex items-center justify-between  px-40 shadow-2xl shadow-amber-800 ">
-			<div className="w-[25%] bg-gray-800 p-5 shadow-2xl shadow-gray-950 text-white rounded-md">
-            <img src="/logo.png" className="w-20"></img>
-            <p className="w-[300px] text-xl">Prime Ta'lim oquv markazi Urgut viloyatida joylashgan bo'lib <b>Mahmud G'afforov</b> tomonidan asos solingan va 10 yillik tarixga ega hisoblanadi.</p>
-            <div className="socials flex flex-row w-full justify-around pt-5">
-                <a className="socials_inst" href="https://instagram.com"><img src="/instagram-logo.png" width={"40px"} className="bg-white rounded-md"></img></a>
-                <a className="socials_inst" href="https://instagram.com"><img src="/instagram-logo.png" width={"40px"} className="bg-white rounded-md"></img></a>
-                <a className="socials_inst" href="https://instagram.com"><img src="/instagram-logo.png" width={"40px"} className="bg-white rounded-md"></img></a>
-                <a className="socials_inst" href="https://instagram.com"><img src="/instagram-logo.png" width={"40px"} className="bg-white rounded-md"></img></a>
-            </div>
-            </div>
-			<nav className="w-[30%] flex flex-col gap-5 bg-gray-800 p-5 text-white items-center justify-between uppercase  rounded-md" >
-                <Link className="border-2 border-gray-950 w-full text-center hover:scale-110 hover:bg-gray-600 p-2" to="/">Asosiy</Link>
-				<Link className="border-2 border-gray-950 w-full text-center hover:scale-110 hover:bg-gray-600 p-2" to="/courses">Kurslar</Link>
-				<Link className="border-2 border-gray-950 w-full text-center hover:scale-110 hover:bg-gray-600 p-2" to="/videos">Video darslar</Link>
-				<Link className="border-2 border-gray-950 w-full text-center hover:scale-110 hover:bg-gray-600 p-2" to="/test">Sinov Testi</Link>
-                <Button  className="w-full" variant="contained">login</Button>
-                <Button  className="w-full" variant="contained">Contact</Button>
-			</nav>
-            <div className="w-[400px] h-[300px] flex flex-col items-center   justify-between bg-gray-800 text-white rounded-md">
-                <h1 className="text-2xl text-center">Xarita ustiga bosing va kelajak sari qadam tashlang</h1>
-                <a className="" href="https://maps.app.goo.gl/v5r2ZnUv1rNgsPv76">
-                    <img className="w-40" src="/google-maps.png"></img>
-                </a>
-            <div className="w-full flex items-center justify-between">
-            
-            </div>
+import { Button } from "@mui/material";
+import { motion } from "framer-motion";
 
-            </div>
-            
-    	</footer>
-	);
+export default function Footer() {
+  return (
+    <motion.footer
+      className="bg-gradient-to-tr from-blue-600 to-blue-900 text-white w-full py-12 px-6 sm:px-20 flex flex-wrap justify-between items-center shadow-lg shadow-blue-900/40"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      id="footer"
+    >
+      {/* Left Section - Logo & Description */}
+      <motion.div
+        className="w-full md:w-1/3 md:border-b-2 md:border-white flex flex-col items-center md:items-start text-center md:text-left space-y-4"
+        initial={{ x: -50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <img src="/logo.png" className="w-28" alt="Logo" />
+        <p className="text-lg max-w-sm leading-relaxed">
+          <b>Prime Ta'lim</b> o'quv markazi Urgut viloyatida joylashgan bo'lib,
+          <b> Mahmud G'afforov</b> tomonidan asos solingan va 10 yillik tajribaga ega.
+        </p>
+      </motion.div>
+
+      {/* Center Section - Navigation & Social Links */}
+      <motion.div
+        className="w-full md:w-1/3 flex flex-col items-center space-y-6"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <nav className="flex flex-col items-center  justify-center  space-y-3 text-lg font-semibold w-full ">
+          {["Asosiy", "Kurslar", "Videolar", "Testlar"].map((label, index) => (
+            <motion.div key={label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full flex items-center justify-center">
+              <Link
+                className="py-2 px-4  border-b-2 border-blue-400 hover:text-gray-300 transition"
+                to={index === 0 ? "/" : `/${label.toLowerCase()}`}
+              >
+                {label}
+              </Link>
+            </motion.div>
+          ))}
+        </nav>
+
+        {/* Social Media Links */}
+        <div className="flex space-x-6">
+          {["instagram", "facebook", "telegram", "youtube"].map((platform) => (
+            <motion.a
+              key={platform}
+              href={`https://${platform}.com`}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img src={`/${"instagram"}-logo.png`} className="w-9 transition-transform" alt={platform} />
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Right Section - Location & Contact Buttons */}
+      <motion.div
+        className="w-full md:w-1/3 flex flex-col items-center space-y-6"
+        initial={{ x: 50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        <motion.a
+          href="https://maps.app.goo.gl/v5r2ZnUv1rNgsPv76"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <img src="/google-maps.png" className="w-48 transition-transform rounded-lg" alt="Google Maps" />
+        </motion.a>
+
+        <div className="flex space-x-4">
+          
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <Button variant="contained" sx={{ backgroundColor: "#1E40AF" }} ><a href="#contact">Aloqaga Chiqish</a></Button>
+          </motion.div>
+        </div>
+      </motion.div>
+    </motion.footer>
+  );
 }

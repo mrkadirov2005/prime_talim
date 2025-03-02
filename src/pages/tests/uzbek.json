@@ -1,4 +1,4 @@
-const uzbek_ona_tili=[
+[
     {
       "level": "A1",
       "question": "O'zbek tilida \"salom\" so'zi nima ma'noni anglatadi?",
@@ -132,5 +132,3 @@ const uzbek_ona_tili=[
       "answer": "Abdurauf Fitrat"
     }
   ]
-  export default uzbek_ona_tili;
-  

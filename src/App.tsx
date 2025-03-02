@@ -7,14 +7,17 @@ import Test from './pages/Test'
 import AboutUs from './pages/AboutUs'
 import VCourses from './pages/VCourses'
 import Courses from './pages/Courses'
+import SEB from './pages/SEB'
 function App() {
 
 
   return (
     <BrowserRouter>
-    
+    <Routes>
+      <Route path='/seb' element={<SEB/>}></Route>
+    </Routes>
     <Header/>
-    <main className='min-h-screen h-fit flex flex-col items-center justify-between'>
+    <main id='main' className='min-h-screen h-fit flex flex-col items-center justify-between'>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/about' element={<AboutUs/>}></Route>

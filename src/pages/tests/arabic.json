@@ -1,4 +1,4 @@
-const arabic_tests=[
+[
     {
       "level": "A1",
       "question": "ما هو الجمع لكلمة 'كتاب'؟",
@@ -120,5 +120,3 @@ const arabic_tests=[
       "answer": "أنا ذهبت إلى المكتبة ولكن لم أجد الكتاب"
     }
   ]
-  
-  export default arabic_tests;

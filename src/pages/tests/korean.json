@@ -1,4 +1,4 @@
-const korean_tests=[
+[
     {
       "level": "A1",
       "question": "‘책’의 복수형은 무엇인가요?",
@@ -120,5 +120,3 @@ const korean_tests=[
       "answer": "to prepare"
     }
   ]
-  
-  export default korean_tests

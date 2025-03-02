@@ -1,5 +1,4 @@
-const Tests_I_T={
-    "test": [
+[
       {
         "id": 0,
         "level": "Python",
@@ -497,7 +496,3 @@ const Tests_I_T={
         "answer": "Provides a ready-made interface to manage models"
       }
     ]
-  }
-  
-
-  export default Tests_I_T 
