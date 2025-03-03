@@ -85,7 +85,7 @@ export default function Home() {
         <motion.h1 variants={slideUp} className="text-center font-bold text-orange-700 text-2xl md:text-4xl uppercase">
           Bizdagi kurslar
         </motion.h1>
-        <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-5 w-[90%] bg-orange-500 p-6 md:p-10 rounded-md">
+        <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-5 w-[90%] bg-orange-300 p-6 md:p-10 rounded-md">
           {[
             { classs: "Ingliz tili", type: "language" },
             { classs: "Rus tili", type: "language" },
@@ -103,10 +103,10 @@ export default function Home() {
       </motion.section>
 
       {/* Contact Form */}
-      <motion.section variants={fadeIn} id="contact" className="w-[90%] mx-auto bg-cover rounded-[20px] min-h-[600px] bg-[url('contact_form_bg.png')] relative mb-10">
+      <motion.section variants={fadeIn} id="contact" className="w-[90%] bg-[url('https://images01.nicepagecdn.com/page/28/70/website-template-preview-2870470.jpg')] contact_form_bg mx-auto bg-cover rounded-[20px] min-h-[600px]  relative mb-10">
         <motion.form 
           variants={slideUp} 
-          className="w-full md:w-[600px] text-white ml-auto md:ml-auto min-h-[550px] bg-gray-700 p-6 md:p-14 rounded-md flex flex-col gap-4"
+          className="w-full md:w-[600px] text-white ml-auto md:ml-auto min-h-[550px] bg-orange-700 p-6 md:p-14 rounded-md flex flex-col gap-4"
         >
           <h1 className="text-white text-2xl md:text-4xl">Aloqaga chiqish</h1>
           <p className="text-lg md:text-xl">Bepul kirish darsiga yoziling</p>

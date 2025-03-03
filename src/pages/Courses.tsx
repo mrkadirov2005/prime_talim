@@ -31,11 +31,11 @@ const courses = [
     key: 3,
   },
   {
-    name: "Koreys tili",
-    description: "Koreys tilida erkin gapirishni o'rganing.",
+    name: "Biologiya",
+    description: "Biologiya fanidan maxsus daraja testlar.",
     levels: ["1-daraja", "2-daraja", "3-daraja", "4-daraja"],
     price: "240",
-    teacher: "Sung-min",
+    teacher: "Abdulaziz",
     key: 4,
   },
   {
@@ -63,8 +63,8 @@ const courses = [
     key: 7,
   },
   {
-    name: "IQ",
-    description: "Mantiqiy va analitik fikrlashni rivojlantirish mashg'ulotlari.",
+    name: "Kimyo",
+    description: "Kimyo fanidan maxsus daraja testlari.",
     levels: ["Asosiy", "Orta", "Murakkab"],
     price: "270",
     teacher: "Rustam",

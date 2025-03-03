@@ -1,0 +1,123 @@
+[
+    {
+      "level": "A1",
+      "question": "Kimyo fanining asosiy o‘rganish obyekti nima?",
+      "options": ["Modda va uning o‘zgarishlari", "Elektr toki", "Yerning tuzilishi", "Hayvonlarning hayoti"],
+      "answer": "Modda va uning o‘zgarishlari"
+    },
+    {
+      "level": "A1",
+      "question": "Suvning kimyoviy formulasi qanday?",
+      "options": ["CO₂", "H₂O", "O₂", "HCl"],
+      "answer": "H₂O"
+    },
+    {
+      "level": "A1",
+      "question": "Qaysi zarracha musbat zaryadlangan?",
+      "options": ["Elektron", "Neutron", "Proton", "Atom"],
+      "answer": "Proton"
+    },
+    {
+      "level": "A1",
+      "question": "Havoning asosiy tarkibiy qismi qaysi gaz?",
+      "options": ["Kislorod", "Azot", "Uglerod dioksid", "Vodород"],
+      "answer": "Azot"
+    },
+    {
+      "level": "A1",
+      "question": "Qaysi metallar eng engil hisoblanadi?",
+      "options": ["Temir", "Mis", "Lity", "Kumush"],
+      "answer": "Lity"
+    },
+    {
+      "level": "A2",
+      "question": "Moddalarning eng kichik zarrachasi nima?",
+      "options": ["Molekula", "Atom", "Ion", "Proton"],
+      "answer": "Atom"
+    },
+    {
+      "level": "A2",
+      "question": "NaCl qanday modda?",
+      "options": ["Shakar", "Sirka", "Osh tuzi", "Suv"],
+      "answer": "Osh tuzi"
+    },
+    {
+      "level": "A2",
+      "question": "Kislorod atomining valentligi nechaga teng?",
+      "options": ["1", "2", "3", "4"],
+      "answer": "2"
+    },
+    {
+      "level": "A2",
+      "question": "Metallar orasida elektrni eng yaxshi o‘tkazuvchi qaysi?",
+      "options": ["Temir", "Mis", "Oltin", "Kumush"],
+      "answer": "Kumush"
+    },
+    {
+      "level": "A2",
+      "question": "Kislotaning suvdagi eritmasi qanday ionni hosil qiladi?",
+      "options": ["OH⁻", "Cl⁻", "H⁺", "Na⁺"],
+      "answer": "H⁺"
+    },
+    {
+      "level": "B1",
+      "question": "PH 7 ga teng bo‘lsa, eritma qanday xususiyatga ega?",
+      "options": ["Neytral", "Kislotali", "Ishqoriy", "Tuz"],
+      "answer": "Neytral"
+    },
+    {
+      "level": "B1",
+      "question": "Organik moddalarning asosiy tarkibiy qismi nima?",
+      "options": ["Azot", "Uglerod", "Fosfor", "Kislorod"],
+      "answer": "Uglerod"
+    },
+    {
+      "level": "B1",
+      "question": "Eng kuchli kislotalardan biri qaysi?",
+      "options": ["Sulfat kislota", "Sirka kislota", "Uglerod kislotasi", "Fosfor kislotasi"],
+      "answer": "Sulfat kislota"
+    },
+    {
+      "level": "B1",
+      "question": "Oltinning kimyoviy belgisi nima?",
+      "options": ["Ag", "Au", "Al", "O"],
+      "answer": "Au"
+    },
+    {
+      "level": "B1",
+      "question": "Suv tarkibida nechta vodorod atomi mavjud?",
+      "options": ["1", "2", "3", "4"],
+      "answer": "2"
+    },
+    {
+      "level": "B2",
+      "question": "Qaysi element olovsiz yonishi mumkin?",
+      "options": ["Kislorod", "Ftor", "Lity", "Gidrogen"],
+      "answer": "Ftor"
+    },
+    {
+      "level": "B2",
+      "question": "Qaysi reaksiya oksidlanish-qaytarilish reaksiyasiga kiradi?",
+      "options": ["NaCl + AgNO₃", "Zn + HCl → ZnCl₂ + H₂", "H₂O → H₂ + O₂", "NaOH + HCl → NaCl + H₂O"],
+      "answer": "Zn + HCl → ZnCl₂ + H₂"
+    },
+    {
+      "level": "B2",
+      "question": "Kimyo tarixida atom tuzilishini model sifatida birinchi kim taklif qilgan?",
+      "options": ["Dalton", "Mendeleyev", "Rutherford", "Boyl"],
+      "answer": "Dalton"
+    },
+    {
+      "level": "B2",
+      "question": "Galka (NaOH) qaysi sinfga kiradi?",
+      "options": ["Kislota", "Ishqor", "Tuz", "Oksid"],
+      "answer": "Ishqor"
+    },
+    {
+      "level": "B2",
+      "question": "Qaysi metall suv bilan reaksiyaga kirishib vodorod hosil qiladi?",
+      "options": ["Mis", "Oltin", "Natriy", "Temir"],
+      "answer": "Natriy"
+    }
+  ]
+  

@@ -3,11 +3,12 @@ import "./responsive.css";
 import english_test from "./tests/english.json";
 import russian_test from "./tests/Russian.json";
 import arabic_test from "./tests/arabic.json";
-import korean_test from "./tests/korean.json";
 import uzbek_test from "./tests/uzbek.json";
 import IQ_test from "./tests/IQ.json";
 import IT_test from "./tests/IT.json";
 import Math_test from "./tests/Math.json";
+import biology from "./tests/biology.json";
+import chemistry from "./tests/chemistry.json";
 import { Button, Select, MenuItem, TextField, Card, CardContent } from "@mui/material";
 
 interface ITEM {
@@ -20,12 +21,13 @@ interface ITEM {
 const testOptions: Record<string, ITEM[]> = {
   english: english_test,
   russian: russian_test,
-  korean: korean_test,
   arabic: arabic_test,
   uzbek: uzbek_test,
   it: IT_test,
   iq: IQ_test,
   math: Math_test,
+  biology:biology,
+  chemistry:chemistry
 };
 
 export default function SEB() {

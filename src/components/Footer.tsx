@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 
 export default function Footer() {
+  const links=["https://instagram.com","https://facebook.com","https://t.me/primestudy_in_urgut","https://youtube.com"]
   return (
     <motion.footer
       className="bg-gradient-to-tr from-blue-600 to-blue-900 text-white w-full py-12 px-6 sm:px-20 flex flex-wrap justify-between items-center shadow-lg shadow-blue-900/40"
@@ -47,17 +48,17 @@ export default function Footer() {
 
         {/* Social Media Links */}
         <div className="flex space-x-6">
-          {["instagram", "facebook", "telegram", "youtube"].map((platform) => (
+          {["instagram", "facebook", "telegram", "youtube"].map((platform,index) => (
             <motion.a
               key={platform}
-              href={`https://${platform}.com`}
+              href={links[index]}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <img src={`/${"instagram"}-logo.png`} className="w-9 transition-transform" alt={platform} />
+              <img src={`/${platform}-logo.png`} className="w-9 transition-transform" alt={platform} />
             </motion.a>
           ))}
         </div>

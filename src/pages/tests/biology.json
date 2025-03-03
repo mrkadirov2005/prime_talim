@@ -1,0 +1,123 @@
+[
+    {
+      "level": "A1",
+      "question": "Qaysi organizm hujayrasida yadro mavjud?",
+      "options": ["Bakteriyalar", "Viruslar", "Hayvon hujayrasi", "Prionlar"],
+      "answer": "Hayvon hujayrasi"
+    },
+    {
+      "level": "A1",
+      "question": "Fotosintez qaysi organoidda sodir bo‘ladi?",
+      "options": ["Mitoxondriya", "Xloroplast", "Ribosoma", "Yadro"],
+      "answer": "Xloroplast"
+    },
+    {
+      "level": "A1",
+      "question": "Qonning qaysi hujayralari kislorod tashishda ishtirok etadi?",
+      "options": ["Leykotsitlar", "Eritrotsitlar", "Trombotsitlar", "Plazma"],
+      "answer": "Eritrotsitlar"
+    },
+    {
+      "level": "A1",
+      "question": "DNK qaysi shaklda bo‘ladi?",
+      "options": ["Spiral", "To‘g‘ri chiziq", "Uchburchak", "Halqa"],
+      "answer": "Spiral"
+    },
+    {
+      "level": "A1",
+      "question": "Inson skeleti nechta suyakdan iborat?",
+      "options": ["50", "100", "206", "300"],
+      "answer": "206"
+    },
+    {
+      "level": "A2",
+      "question": "Qaysi modda genetik axborotni kodlaydi?",
+      "options": ["Protein", "Lipid", "DNK", "Uglevod"],
+      "answer": "DNK"
+    },
+    {
+      "level": "A2",
+      "question": "Yurak qaysi tizimga kiradi?",
+      "options": ["Ovqat hazm qilish", "Asab", "Qon aylanish", "Endokrin"],
+      "answer": "Qon aylanish"
+    },
+    {
+      "level": "A2",
+      "question": "Hayvonlar qanday usulda energiya hosil qiladi?",
+      "options": ["Fotosintez", "Oksidlanish", "Diffuziya", "Transkripsiya"],
+      "answer": "Oksidlanish"
+    },
+    {
+      "level": "A2",
+      "question": "Odam organizmidagi eng katta organ qaysi?",
+      "options": ["Jigar", "Yurak", "Miya", "Teri"],
+      "answer": "Teri"
+    },
+    {
+      "level": "A2",
+      "question": "Nerv impulslari qanday modda orqali uzatiladi?",
+      "options": ["Neyrotransmitter", "Qon", "Suv", "Gormon"],
+      "answer": "Neyrotransmitter"
+    },
+    {
+      "level": "B1",
+      "question": "Qaysi vitamin yetishmovchiligi raxit kasalligiga olib keladi?",
+      "options": ["A vitamini", "B vitamini", "C vitamini", "D vitamini"],
+      "answer": "D vitamini"
+    },
+    {
+      "level": "B1",
+      "question": "Evolyutsiya nazariyasini kim ilgari surgan?",
+      "options": ["Mendel", "Darwin", "Paster", "Linney"],
+      "answer": "Darwin"
+    },
+    {
+      "level": "B1",
+      "question": "Odam tanasida nechta xromosoma mavjud?",
+      "options": ["23", "46", "64", "92"],
+      "answer": "46"
+    },
+    {
+      "level": "B1",
+      "question": "Qaysi hujayra bo‘linish jarayonida xromosomalar ajraladi?",
+      "options": ["Mitoz", "Meoz", "Transkripsiya", "Endositoz"],
+      "answer": "Mitoz"
+    },
+    {
+      "level": "B1",
+      "question": "Gormonlarni ishlab chiqaradigan bezlar qaysi tizimga tegishli?",
+      "options": ["Asab tizimi", "Ovqat hazm qilish", "Endokrin tizim", "Qon aylanish"],
+      "answer": "Endokrin tizim"
+    },
+    {
+      "level": "B2",
+      "question": "Qaysi gormon qon bosimini oshiradi?",
+      "options": ["Insulin", "Adrenalin", "Melatonin", "Testosteron"],
+      "answer": "Adrenalin"
+    },
+    {
+      "level": "B2",
+      "question": "Qaysi organ azotli moddalarni chiqarib tashlashga yordam beradi?",
+      "options": ["Yurak", "Buyrak", "Jigar", "O‘pka"],
+      "answer": "Buyrak"
+    },
+    {
+      "level": "B2",
+      "question": "DNK replikatsiyasida qaysi ferment ishtirok etadi?",
+      "options": ["Lipaza", "Amilaza", "DNK polimeraza", "Pepsin"],
+      "answer": "DNK polimeraza"
+    },
+    {
+      "level": "B2",
+      "question": "Qaysi organizmlar azot fiksatsiyasida ishtirok etadi?",
+      "options": ["Viruslar", "Mantarlar", "Bakteriyalar", "Hayvonlar"],
+      "answer": "Bakteriyalar"
+    },
+    {
+      "level": "B2",
+      "question": "Insulin nima qiladi?",
+      "options": ["Qon shakarini oshiradi", "Qon shakarini tushiradi", "Qonni tozalaydi", "Energiyani ishlab chiqaradi"],
+      "answer": "Qon shakarini tushiradi"
+    }
+  ]
+  

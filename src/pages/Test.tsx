@@ -5,20 +5,22 @@ export default function Test() {
   return (
     <section className="w-full bg-gradient-to-tr from-blue-300 to-violet-400 min-h-screen py-10 flex flex-col  items-center justify-center">
       <ul className="flex flex-wrap gap-8 justify-center px-4 pb-10">
-        <Card_Test key={1} levels="A1-C1" number="20" test="Ingliz tili" />
+        <Card_Test key={1} levels="A1-C1" number="60" test="Ingliz tili" />
         <Card_Test key={2} levels="A1-C1" number="20" test="Arab tili" />
         <Card_Test key={3} levels="A1-C1" number="20" test="Rus tili" />
-        <Card_Test key={8} levels="A1-C1" number="20" test="Koreys tili" />
+        <Card_Test key={8} levels="A1-C1" number="20" test="Biologiya" />
+        <Card_Test key={8} levels="A1-C1" number="20" test="Kimyo" />
         <Card_Test key={4} levels="A1-C1" number="20" test="Ona tili va Adabiyot" />
-        <Card_Test key={5} levels="A1-C1" number="20" test="Tarix" />
         <Card_Test key={6} levels="A1-C1" number="20" test="Axborot texnologiyalari (IT)" />
-        <Card_Test key={7} levels="A1-C1" number="20" test="IQ" />
       </ul>
       <a href="/seb"><Button color="primary" variant="contained">Testni boshlash</Button></a>
     </section>
   );
 }
-
+// 0 - 9	A1
+// 10 - 19	A2
+// 20 - 29	B1
+// 30 - 40	B2
 interface PROPS {
   test: string;
   number: string;
