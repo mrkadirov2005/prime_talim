@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import Card from "../components/Card";
 import Item_Card from "../components/Item_Card";
 import Class from "../components/Class";
+import AboutUs from "./AboutUs";
 
 // Variants for animations
 const fadeIn = {
@@ -101,7 +102,8 @@ export default function Home() {
           ))}
         </motion.div>
       </motion.section>
-
+      {/* about us part */}
+      <AboutUs/>
       {/* Contact Form */}
       <motion.section variants={fadeIn} id="contact" className="w-[90%] bg-[url('https://images01.nicepagecdn.com/page/28/70/website-template-preview-2870470.jpg')] contact_form_bg mx-auto bg-cover rounded-[20px] min-h-[600px]  relative mb-10">
         <motion.form 
