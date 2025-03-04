@@ -13,13 +13,11 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/seb' element={<SEB/>}></Route>
-    </Routes>
     <Header/>
     <main id='main' className='min-h-screen h-fit flex flex-col items-center justify-between'>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
+      <Route path='/seb' element={<SEB/>}></Route>
       <Route path='/about' element={<AboutUs/>}></Route>
       <Route path='/videos' element={<VCourses/>}></Route>
       <Route path='/courses' element={<Courses/>}></Route>
