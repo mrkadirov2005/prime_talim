@@ -105,10 +105,10 @@ export default function Home() {
       {/* about us part */}
       <AboutUs/>
       {/* Contact Form */}
-      <motion.section variants={fadeIn} id="contact" className="w-[90%] bg-[url('https://images01.nicepagecdn.com/page/28/70/website-template-preview-2870470.jpg')] contact_form_bg mx-auto bg-cover rounded-[20px] min-h-[600px]  relative mb-10">
+      <motion.section variants={fadeIn} id="contact" className="m-0 mt-[-20px] mb-[-50px] p-0 bg-gradient-to-br from-orange-300 to-blue-300 w-full flex items-center justify-center contact_form_bg mx-auto bg-cover min-h-[600px]  relative ">
         <motion.form 
           variants={slideUp} 
-          className="w-full md:w-[600px] text-white ml-auto md:ml-auto min-h-[550px] bg-orange-700 p-6 md:p-14 rounded-md flex flex-col gap-4"
+          className="w-full md:w-[600px] text-white m-auto md:ml-auto min-h-[550px] bg-orange-700 p-6 md:p-14 rounded-md flex flex-col gap-4"
         >
           <h1 className="text-white text-2xl md:text-4xl">Aloqaga chiqish</h1>
           <p className="text-lg md:text-xl">Bepul kirish darsiga yoziling</p>

@@ -1,4 +1,20 @@
-[
+import React from "react";
+import { Card, CardContent } from "@mui/material";
+
+export interface TEACHER {
+  No: number;
+  Ismlar: string;
+  Telefon: string;
+  Lavozim: string;
+  Rasm: string;
+  "Tug'ilgan yili": string;
+  "O'qigan Joyi": string;
+  "Ish Tajribasi": string;
+  "Pedagogik Tajriba": string;
+  Yutuqlar: string;
+}
+
+const teachers: TEACHER[] = [
   {
     "No": 1,
     "Ismlar": "G’afforov Mahmud",
@@ -118,5 +134,59 @@
     "Ish Tajribasi": "Prime Study o'quv markazi",
     "Pedagogik Tajriba": "3 yil",
     "Yutuqlar": "50 nafar o'quvchisi talaba bo'lgan"
+  },
+  {
+    No: 19,
+    Ismlar: "Rahmonov Otabek",
+    Telefon: "97 933 88 27",
+    Lavozim: "Biologiya",
+    Rasm: "/otabek.png",
+    "Tug'ilgan yili": "25.07.2000",
+    "O'qigan Joyi": "SamDU",
+    "Ish Tajribasi": "Bilim Orzu, Cambridge, Prime ta’lim o'quv markazi",
+    "Pedagogik Tajriba": "5 yil",
+    Yutuqlar: "100 dan ortiq o'quvchisi talaba bo'lgan",
+  },
+  {
+    No: 20,
+    Ismlar: "Asliddinov Samandar",
+    Telefon: "91 628 33 81",
+    Lavozim: "Kimyo",
+    Rasm: "/samandar.jpg",
+    "Tug'ilgan yili": "25.09.2003",
+    "O'qigan Joyi": "SamDU",
+    "Ish Tajribasi": "Prime Study o'quv markazi",
+    "Pedagogik Tajriba": "3 yil",
+    Yutuqlar: "50 nafar o'quvchisi talaba bo'lgan",
   }
-]
+];
+
+const TeacherCard: React.FC<{ teacher: TEACHER }> = ({ teacher }) => {
+  return (
+    <Card className="w-80 p-4 rounded-2xl shadow-lg h-fit pt-0 bg-white">
+      <CardContent className="flex flex-col items-center">
+        <img src={teacher.Rasm} alt={teacher.Ismlar} className="w-auto max-h-[250px] mb-3" />
+        <h3 className="text-xl font-bold">{teacher.Ismlar}</h3>
+        <p className="text-sm text-gray-500">{teacher.Lavozim}</p>
+        <p className="text-sm text-gray-600">📅 {teacher["Tug'ilgan yili"]}</p>
+        <p className="text-sm text-gray-600">🎓 {teacher["O'qigan Joyi"]}</p>
+        <p className="text-sm text-gray-600">⌛ Tajriba: {teacher["Ish Tajribasi"]}</p>
+        {teacher.Yutuqlar && (
+          <p className="mt-2 bg-green-500 text-white p-1 rounded-lg">🏆 {teacher.Yutuqlar}</p>
+        )}
+      </CardContent>
+    </Card>
+  );
+};
+
+const TeacherList: React.FC = () => {
+  return (
+    <div className="flex flex-wrap gap-6 justify-center p-6">
+      {teachers.map((teacher) => (
+        <TeacherCard key={teacher.No} teacher={teacher} />
+      ))}
+    </div>
+  );
+};
+
+export default TeacherList;
