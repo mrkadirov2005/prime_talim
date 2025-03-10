@@ -7,8 +7,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          react: ['react', 'react-dom'],
-          vendor: ['lodash', 'axios'], // Example: split common libraries
+          react: ['react', 'react-dom']
         },
       },
     },
