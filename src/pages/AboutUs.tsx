@@ -23,7 +23,7 @@ export default function AboutUs() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl font-extrabold text-white drop-shadow-lg">
+        <h1 className="text-4xl font-extrabold text-orange-500 mb-2 drop-shadow-lg">
           Biz haqimizda nimalarni bilasiz?
         </h1>
       <Button variant="contained" color="success" onClick={()=>setIsView(!isview)}>{isview?"Yopish":"Barcha ustozlar"}</Button>

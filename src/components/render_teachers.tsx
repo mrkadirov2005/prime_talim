@@ -112,18 +112,6 @@ const teachers: TEACHER[] = [
     "Yutuqlar": "CEFR C1"
   },
   {
-    "No": 19,
-    "Ismlar": "Rahmonov Otabek",
-    "Telefon": "97 933 88 27",
-    "Lavozim": "Biologiya",
-    "Rasm": "/otabek.jpg",
-    "Tug'ilgan yili": "25.07.2000",
-    "O'qigan Joyi": "SamDU",
-    "Ish Tajribasi": "Bilim orzu, Cambridge ,  Prime taʼlim  o'quv markazi",
-    "Pedagogik Tajriba": "5 yil",
-    "Yutuqlar": "100 dan ortiq o'quvchisi talaba bo'lgan"
-  },
-  {
     "No": 20,
     "Ismlar": "Asliddinov Samandar",
     "Telefon": "91 628 33 81",
@@ -147,24 +135,13 @@ const teachers: TEACHER[] = [
     "Pedagogik Tajriba": "5 yil",
     Yutuqlar: "100 dan ortiq o'quvchisi talaba bo'lgan",
   },
-  {
-    No: 20,
-    Ismlar: "Asliddinov Samandar",
-    Telefon: "91 628 33 81",
-    Lavozim: "Kimyo",
-    Rasm: "/samandar.jpg",
-    "Tug'ilgan yili": "25.09.2003",
-    "O'qigan Joyi": "SamDU",
-    "Ish Tajribasi": "Prime Study o'quv markazi",
-    "Pedagogik Tajriba": "3 yil",
-    Yutuqlar: "50 nafar o'quvchisi talaba bo'lgan",
-  }
+  
 ];
 
 const TeacherCard: React.FC<{ teacher: TEACHER }> = ({ teacher }) => {
   return (
-    <Card className="w-80 p-4 rounded-2xl shadow-lg h-fit pt-0 bg-white">
-      <CardContent className="flex flex-col items-center">
+    <Card className="w-80  hover:scale-105 hover:bg-blue-500 rounded-2xl shadow-lg h-fit pt-0 ">
+      <CardContent className="flex flex-col items-center hover:bg-gradient-to-br from-orange-400 to-blue-400">
         <img src={teacher.Rasm} alt={teacher.Ismlar} className="w-auto max-h-[250px] mb-3" />
         <h3 className="text-xl font-bold">{teacher.Ismlar}</h3>
         <p className="text-sm text-gray-500">{teacher.Lavozim}</p>

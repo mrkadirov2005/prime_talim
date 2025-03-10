@@ -28,7 +28,7 @@ export default function Header() {
       {/* Buttons (Hidden on mobile) */}
       <div className="hidden sm:flex w-[15%] items-center justify-between">
         {/* <Button variant="contained" color="primary" className="hover:scale-110 transition-transform">Login</Button> */}
-        <Button variant="contained" color="error" className="hover:scale-110 transition-transform"><a href="#contact">Aloqaga chiqish</a></Button>
+        <Button variant="contained" color="error" className="hover:scale-110 transition-transform"><a href="/#contact">Aloqaga chiqish</a></Button>
       </div>
 
       {/* Hamburger Button (Mobile) */}

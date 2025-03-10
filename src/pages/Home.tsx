@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import Item_Card from "../components/Item_Card";
 import Class from "../components/Class";
 import AboutUs from "./AboutUs";
+import { useState } from "react";
 
 // Variants for animations
 const fadeIn = {
@@ -22,6 +23,37 @@ const staggerContainer = {
 };
 
 export default function Home() {
+const [isSent,setIsSent]=useState<boolean>();
+  const handleSend = async () => {
+
+    const formData = {
+      ismingiz: (document.querySelector("input[placeholder='Ismingiz']") as HTMLInputElement).value,
+      familiyangiz: (document.querySelector("input[placeholder='Familiyangiz']") as HTMLInputElement).value,
+      telefon: (document.querySelector("input[placeholder='Telefon raqamingiz']") as HTMLInputElement).value,
+      maktab: (document.querySelector("select") as HTMLSelectElement).value,
+    };
+  
+    if (!formData.ismingiz || !formData.familiyangiz || !formData.telefon || formData.maktab === "--Maktabingizni tanlang:") {
+      alert("Iltimos, barcha maydonlarni to'ldiring!");
+      return;
+    }
+    setIsSent(true);
+    try {
+      console.log(formData)
+      await fetch("https://script.google.com/macros/s/AKfycbwnj13TjHhQ8wt4AuYfbuS5cf1yokSGvHyqy5fkuU86L341Eh1uwucTLRtftbufAWvf/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+        mode:"no-cors"
+      });
+  
+      
+    } catch (error) {
+    }
+  };
+  
+
+
   return (
     <motion.section initial="hidden" animate="visible" className="w-full">
       
@@ -111,10 +143,10 @@ export default function Home() {
           className="w-full md:w-[600px] text-white m-auto md:ml-auto min-h-[550px] bg-orange-700 p-6 md:p-14 rounded-md flex flex-col gap-4"
         >
           <h1 className="text-white text-2xl md:text-4xl">Aloqaga chiqish</h1>
-          <p className="text-lg md:text-xl">Bepul kirish darsiga yoziling</p>
           <div className="flex flex-col gap-4 w-full">
             {["Ismingiz", "Familiyangiz", "Telefon raqamingiz"].map((placeholder, index) => (
               <motion.input 
+              required
                 key={index} 
                 variants={slideUp} 
                 className="w-full p-3 border-2 border-white bg-gray-800 text-white rounded-md"
@@ -128,6 +160,7 @@ export default function Home() {
                 <option key={item} value={item}>{item}</option>
               ))}
             </motion.select>
+            <Button variant="contained" disabled={isSent==true} color="success" onClick={()=>handleSend()}>{isSent?"Yuborildi":"Yuborish"}</Button>
           </div>
         </motion.form>
       </motion.section>
@@ -135,3 +168,6 @@ export default function Home() {
     </motion.section>
   );
 }
+
+
+// https://script.google.com/macros/s/AKfycbzOnN1dPJL3I-2wA_O8v_GDCY7spTUjrXFTRkVj0AOATV6J7SpiN7Onh5nlFQpWt72h/exec

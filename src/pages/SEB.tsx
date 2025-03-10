@@ -26,8 +26,8 @@ const testOptions: Record<string, ITEM[]> = {
   it: IT_test,
   iq: IQ_test,
   math: Math_test,
-  biology:biology,
-  chemistry:chemistry
+  biology: biology,
+  chemistry: chemistry,
 };
 
 export default function SEB() {
@@ -38,35 +38,66 @@ export default function SEB() {
   const [corrects, setCorrects] = useState<number>(0);
   const [showResults, setShowResults] = useState(false);
 
+  const [userData, setUserData] = useState({
+    ismingiz: "",
+    familiyangiz: "",
+    maktab: "",
+    sinf: "",
+    telefon: "",
+    fan: "",
+    corrects:0
+  });
+
   useEffect(() => {
     if (option in testOptions) {
       setTests(testOptions[option]);
-      setSelectedAnswers({}); // Reset answers on test change
+      setSelectedAnswers({});
       setCorrects(0);
       setShowResults(false);
     }
+
+    // Ensure fan is updated when option changes
+    setUserData((prev) => ({ ...prev, fan: option }));
   }, [option]);
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
 
-  const handleStartTest=()=>{
-    setIsRegistered(true)
-    useEffect(() => {
-      const header=document.getElementById("header") as HTMLElement;
-      const footer=document.getElementById("footer") as HTMLElement;
-      const main=document.getElementById("main") as HTMLElement;
-      console.log(header,footer,main)
-      header.style.display="none !important";
-      footer.style.display="none";
-      main.style.display="none";
-    }, [])
-  }
+  const handleStartTest = async () => {
+    console.log("User Data:", userData);
+
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbwSSuEwVP-GVO-Xl56C-EcsCMJm6NOqkfOyTCXTojiR02X7-N27KGKu86lKu6j4aOhuUQ/exec",
+      {
+        body: JSON.stringify(userData),
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        method: "POST",
+      }
+    );
+    setIsRegistered(true);
+  };
 
   function RenderTests({ tests }: { tests: ITEM[] }) {
     const handleClick = (index: number, chosenOption: string, correctAnswer: string) => {
+      if (selectedAnswers[index] !== undefined) return;
       setSelectedAnswers((prev) => ({ ...prev, [index]: chosenOption }));
       if (chosenOption === correctAnswer) {
         setCorrects((prev) => prev + 1);
       }
+    };
+
+    const handleFinishTest =async () => {
+      userData.corrects=corrects;
+      console.log(userData)
+      await fetch("https://script.google.com/macros/s/AKfycbzJPIJNTpphfbdzvo2nUMF3ZEkF4t_U-EwNsF6BWM8n1A9_-NjT86BfnIas4Z6vqbPXKA/exec",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(userData),
+        mode:"no-cors"
+      })
+      setShowResults(true);
     };
 
     return (
@@ -82,27 +113,20 @@ export default function SEB() {
                 <h1 className="text-xl font-semibold text-blue-700">{item.level}</h1>
                 <p className="mt-2 text-gray-700">{item.question}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
-                  {item.options.map((option, i) => {
-                    const isCorrect = option === item.answer;
-                    const isSelected = selected === option;
+                  {item.options.map((opt, i) => {
+                    const isCorrect = opt === item.answer;
+                    const isSelected = selected === opt;
                     return (
-                      <Button
+                      <button
                         key={i}
-                        onClick={() => handleClick(index, option, item.answer)}
-                        variant="contained"
-                        style={{
-                          backgroundColor:
-                            selected && isSelected
-                              ? isCorrect
-                                ? "green"
-                                : "red"
-                              : "",
-                          color: selected && isSelected ? "white" : "",
-                        }}
-                        className="!rounded-md"
+                        onClick={() => handleClick(index, opt, item.answer)}
+                        disabled={selected !== undefined}
+                        className={`p-2 m-2 rounded-md text-white ${
+                          isSelected ? (isCorrect ? "bg-green-600" : "bg-red-600") : "bg-blue-700"
+                        }`}
                       >
-                        {option}
-                      </Button>
+                        {opt}
+                      </button>
                     );
                   })}
                 </div>
@@ -114,13 +138,10 @@ export default function SEB() {
           variant="contained"
           color="primary"
           fullWidth
-          onClick={() =>{
-             setShowResults(true)
-
-          }}
+          onClick={handleFinishTest}
           className="mt-4 !rounded-md"
         >
-          Finish Test
+          Testni yakunlash
         </Button>
         {showResults && (
           <div className="mt-6 text-center text-white text-xl font-bold">
@@ -132,61 +153,103 @@ export default function SEB() {
               onClick={() => setIsRegistered(false)}
               className="mt-4 !rounded-md"
             >
-              Retake Test
+              Qayta topshirish
             </Button>
-            <a href="/"
-              className="mt-4 !rounded-md bg-blue-500 p-2"
-            >
-            Asosiyga qaytish
+            <a href="/" className="mt-2 !rounded-md bg-blue-500 p-2">
+              Asosiyga qaytish
             </a>
           </div>
-        )
-        }
+        )}
       </section>
     );
   }
 
   return (
-    <div className={`bg-gradient-to-bl seb_browser ${!isRegistered?"fixed w-screen h-screen  overflow-hidden":" w-screen h-fit absolute"} from-indigo-500 to-purple-700 min-h-screen flex items-center justify-center px-4`}>
+    <div
+      className={`bg-gradient-to-bl seb_browser ${
+        !isRegistered
+          ? "absolute min-w-screen min-h-screen overflow-hidden"
+          : "w-screen h-fit absolute"
+      } from-indigo-500 to-purple-700 min-h-screen flex items-center justify-center px-4`}
+    >
       {!isRegistered ? (
-        <Card className="w-full  max-w-md p-6 rounded-xl shadow-2xl text-white bg-white/10 backdrop-blur-lg">
+        <Card className="w-full max-w-md p-6 rounded-xl shadow-2xl text-white bg-white/10 backdrop-blur-lg">
           <h2 className="text-2xl font-bold text-center text-white">Ro'yxatdan o'tish</h2>
           <div className="mt-4 flex flex-col gap-4">
-            <TextField label="Ismingizni kiriting" variant="outlined" fullWidth className="bg-white rounded-md" />
-            <TextField label="Familiyangizni kiriting" variant="outlined" fullWidth className="bg-white rounded-md" />
-            <TextField label="Maktabingizni kiriting" type="number" variant="outlined" fullWidth className="bg-white rounded-md" />
-            <TextField label="Sinfingizni kiriting" type="number" variant="outlined" fullWidth className="bg-white rounded-md" />
-            <TextField label="Telefon raqamingizni kiriting" type="number" variant="outlined" fullWidth className="bg-white rounded-md" />
+            <TextField
+              required
+              name="ismingiz"
+              label="Ismingizni kiriting"
+              variant="outlined"
+              fullWidth
+              className="bg-white rounded-md"
+              onChange={handleInputChange}
+            />
+            <TextField
+              required
+              name="familiyangiz"
+              label="Familiyangizni kiriting"
+              variant="outlined"
+              fullWidth
+              className="bg-white rounded-md"
+              onChange={handleInputChange}
+            />
+            <TextField
+              required
+              name="maktab"
+              label="Maktabingizni kiriting"
+              type="number"
+              variant="outlined"
+              fullWidth
+              className="bg-white rounded-md"
+              onChange={handleInputChange}
+            />
+            <TextField
+              required
+              name="sinf"
+              label="Sinfingizni kiriting"
+              type="number"
+              variant="outlined"
+              fullWidth
+              className="bg-white rounded-md"
+              onChange={handleInputChange}
+            />
+            <TextField
+              required
+              name="telefon"
+              label="Telefon raqamingizni kiriting"
+              type="number"
+              variant="outlined"
+              fullWidth
+              className="bg-white rounded-md"
+              onChange={handleInputChange}
+            />
 
             <Select
+              required
               value={option}
               onChange={(e) => setOption(e.target.value)}
-              displayEmpty
               className="bg-white rounded-md"
               fullWidth
             >
-              <MenuItem disabled value="">-- Fan tanlang --</MenuItem>
+              <MenuItem disabled value="">
+                -- Fan tanlang --
+              </MenuItem>
               {Object.keys(testOptions).map((key) => (
                 <MenuItem key={key} value={key}>
                   {key.toUpperCase()}
                 </MenuItem>
               ))}
             </Select>
-            <Button
-              variant="contained"
-              color="secondary"
-              fullWidth
-              onClick={() => handleStartTest()}
-              className="!rounded-md"
-            >
+            <Button variant="contained" color="secondary" fullWidth onClick={handleStartTest} className="!rounded-md">
               Boshlash
             </Button>
           </div>
         </Card>
       ) : (
-      <div className="w-full flex">
+        <div className="w-full flex">
           <RenderTests tests={tests} />
-      </div>
+        </div>
       )}
     </div>
   );
