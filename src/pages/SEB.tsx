@@ -225,6 +225,7 @@ export default function SEB() {
               onChange={handleInputChange}
             />
 
+<Button className="mr-auto">Fanni tanlang</Button>
             <Select
               required
               value={option}
@@ -232,9 +233,6 @@ export default function SEB() {
               className="bg-white rounded-md"
               fullWidth
             >
-              <MenuItem disabled value="">
-                -- Fan tanlang --
-              </MenuItem>
               {Object.keys(testOptions).map((key) => (
                 <MenuItem key={key} value={key}>
                   {key.toUpperCase()}
