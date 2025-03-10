@@ -12,7 +12,12 @@ export default function VCourses() {
       {/* Video Container */}
       <div className="videos-container sm:flex-row pt-5 pb-10 flex items-center flex-wrap bg-gradient-to-br from-blue-500 to-violet-700 justify-around gap-10">
         {Array(9).fill(0).map((_, index) => (
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/nE6gUj8bl6M?si=sJGLiE5fJusZ4pmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <Video
+            key={index}
+            lesson="Kirish Darsi Ingliz tili"
+            src="https://youtu.be/-LgrMv4BDdY?si=r4QpFnOfJr3E0_cq"
+            teacher="Otabek Mahkamov"
+          />
         ))}
       </div>
     </div>
