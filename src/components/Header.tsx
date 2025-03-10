@@ -8,7 +8,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header id="header" className="bg-gradient-to-r from-orange-500 to-blue-400 h-20 z-20 w-full flex items-center justify-between px-6 sm:px-20 shadow-xl shadow-blue-600 relative">
+    <header id="header" className="bg-gradient-to-r from-blue-400 to-orange-500 h-20 z-20 w-full flex items-center justify-between px-6 sm:px-20 shadow-xl shadow-blue-600 relative">
       {/* Logo */}
       <img src="/logo.png" className="w-16 sm:w-20" alt="Logo" />
 
