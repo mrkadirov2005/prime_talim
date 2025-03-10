@@ -9,6 +9,8 @@ import VCourses from "./pages/VCourses";
 import Courses from "./pages/Courses";
 import SEB from "./pages/SEB";
 
+
+
 function App() {
   return (
     <BrowserRouter>
