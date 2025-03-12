@@ -29,7 +29,7 @@ interface PROPS {
 
 function Card_Test({ test, number, levels }: PROPS) {
   return (
-    <div className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] bg-gradient-to-bl from-violet-700 to-blue-900 text-white rounded-lg p-5 shadow-xl shadow-blue-900/40 flex flex-col gap-4 transition-transform hover:scale-105">
+    <a href="/seb" className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] bg-gradient-to-bl from-violet-700 to-blue-900 text-white rounded-lg p-5 shadow-xl shadow-blue-900/40 flex flex-col gap-4 transition-transform hover:scale-105">
       <h1 className="flex text-lg sm:text-xl md:text-2xl items-center pb-2 gap-2 border-b-4 border-gray-400 font-semibold">
         <FaHeading /> {test}
       </h1>
@@ -39,6 +39,6 @@ function Card_Test({ test, number, levels }: PROPS) {
       <span className="text-sm sm:text-base md:text-lg opacity-90">
         Darajalar: {levels}
       </span>
-    </div>
+    </a>
   );
 }

@@ -102,7 +102,7 @@ export default function SEB() {
 
     return (
       <section className="w-full max-w-2xl mx-auto p-4">
-        <h1 className="w-full text-4xl p-4 m-2 font-bold text-center text-white uppercase bg-gradient-to-r from-blue-500 to-purple-600 shadow-md rounded-lg">
+        <h1 className="w-full text-4xl p-4  font-bold text-center text-white uppercase bg-gradient-to-r from-blue-500 to-purple-600 shadow-md rounded-lg">
           {option}
         </h1>
         {tests.map((item, index) => {
@@ -134,15 +134,18 @@ export default function SEB() {
             </Card>
           );
         })}
-        <Button
-          variant="contained"
-          color="primary"
-          fullWidth
-          onClick={handleFinishTest}
-          className="mt-4 !rounded-md"
-        >
-          Testni yakunlash
-        </Button>
+        {!showResults &&(
+  <Button
+  variant="contained"
+  color="primary"
+  fullWidth
+  onClick={handleFinishTest}
+  className="mt-4 !rounded-md"
+>
+  Testni yakunlash
+</Button>
+        )}
+      
         {showResults && (
           <div className="mt-6 text-center text-white text-xl font-bold">
             Your Score: {corrects} / {tests.length}

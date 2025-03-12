@@ -11,7 +11,7 @@ const courses = [
     description: "Ingliz tilini bosqichma-bosqich o'rganing.",
     levels: ["A1", "A2", "B1", "B2", "C1"],
     price: "250",
-    teacher: "Muzaffar",
+    teacher: "Mirzayeva Zilola, Baratova Gulilola...",
     key: 1,
   },
   {
@@ -19,7 +19,7 @@ const courses = [
     description: "Rus tilini oson va samarali o'rganing.",
     levels: ["A1", "A2", "B1", "B2", "C1"],
     price: "220",
-    teacher: "Oleg",
+    teacher: "Xakimova Sevinchbonu",
     key: 2,
   },
   {
@@ -27,7 +27,7 @@ const courses = [
     description: "Arab tilini grammatik va talaffuz asosida o'rganing.",
     levels: ["Boshlang'ich", "O'rta", "Yuqori"],
     price: "230",
-    teacher: "Ahmad",
+    teacher: "Ishev Nodir",
     key: 3,
   },
   {
@@ -35,7 +35,7 @@ const courses = [
     description: "Biologiya fanidan maxsus daraja testlar.",
     levels: ["1-daraja", "2-daraja", "3-daraja", "4-daraja"],
     price: "240",
-    teacher: "Abdulaziz",
+    teacher: "Rahmonov Otabek",
     key: 4,
   },
   {
@@ -43,7 +43,7 @@ const courses = [
     description: "Matematika fanining barcha muhim mavzulari.",
     levels: ["Boshlang'ich", "O'rta", "Oliy"],
     price: "260",
-    teacher: "Ali",
+    teacher: "Ibodullayev Sherali",
     key: 5,
   },
   {
@@ -51,25 +51,17 @@ const courses = [
     description: "O'zbek tili va adabiyotining asosiy qoidalari.",
     levels: ["Boshlang'ich", "O'rta", "Advanced"],
     price: "200",
-    teacher: "Gulnora",
+    teacher: "Shodiyev Odiljon",
     key: 6,
-  },
-  {
-    name: "Tarix",
-    description: "Jahon va O'zbekiston tarixi bo'yicha chuqur ma'lumot.",
-    levels: ["Qadimgi", "O'rta asrlar", "Hozirgi zamon"],
-    price: "210",
-    teacher: "Shavkat",
-    key: 7,
   },
   {
     name: "Kimyo",
     description: "Kimyo fanidan maxsus daraja testlari.",
     levels: ["Asosiy", "Orta", "Murakkab"],
     price: "270",
-    teacher: "Rustam",
+    teacher: "Asliddinov Samandar",
     key: 8,
-  },
+  }
 ];
 export default function Courses() {
   const [data, setData] = useState(courses);

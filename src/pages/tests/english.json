@@ -1,362 +1,401 @@
 [
-  {
-    "level": "A1",
-    "question": "I ______ bus on Mondays.",
-    "options": ["'m going to work with", "'m going to work by", "go to work with", "go to work by"],
-    "answer": "go to work by"
-  },
-  {
-    "level": "A1",
-    "question": "Sorry, but this chair is ______.",
-    "options": ["me", "mine", "my", "our"],
-    "answer": "mine"
-  },
-  {
-    "level": "A1",
-    "question": "A: 'How old ______?'   B: 'I ______ .'",
-    "options": ["are you / am 20 years old.", "have you / have 20 years old", "are you / am 20 years.", "do you have / have 20 years."],
-    "answer": "are you / am 20 years old."
-  },
-  {
-    "level": "A1",
-    "question": "I ______ to the cinema.",
-    "options": ["not usually go", "don't usually go", "don't go usually", "do not go usually"],
-    "answer": "don't usually go"
-  },
-  {
-    "level": "A1",
-    "question": "Where ______ ?",
-    "options": ["your sister works", "your sister work", "does your sister work", "do your sister work"],
-    "answer": "does your sister work"
-  },
-  {
-    "level": "A1",
-    "question": "The test is ______ February.",
-    "options": ["in", "at", "on", "over"],
-    "answer": "in"
-  },
-  {
-    "level": "A1",
-    "question": "I eat pasta ______ week.",
-    "options": ["twice in a", "twice a", "one time a", "once in a"],
-    "answer": "twice a"
-  },
-  {
-    "level": "A1",
-    "question": "I don't have ______ free time.",
-    "options": ["many", "any", "a lot", "some"],
-    "answer": "any"
-  },
-  {
-    "level": "A1",
-    "question": "A: '_____ to the cinema tomorrow?'",
-    "options": ["We will go", "Do we go", "We go", "Shall we go"],
-    "answer": "Shall we go"
-  },
-  {
-    "level": "A1",
-    "question": "We went to the market ______ some vegetables.",
-    "options": ["to buy", "for buy", "for to buy", "for buying"],
-    "answer": "to buy"
-  },
-  {
-    "level": "A2",
-    "question": "Sorry, but when you called I ______ a shower.",
-    "options": ["had", "did have", "was having", "were having"],
-    "answer": "was having"
-  },
-  {
-    "level": "A2",
-    "question": "______ are very friendly and very intelligent.",
-    "options": ["Dolphins", "The dolphins", "A dolphin", "The dolphin"],
-    "answer": "Dolphins"
-  },
-  {
-    "level": "A2",
-    "question": "Somebody stole ______ yesterday.",
-    "options": ["the car of my mother", "my car mother", "my mother's car", "my mother car"],
-    "answer": "my mother's car"
-  },
-  {
-    "level": "A2",
-    "question": "______ with me?",
-    "options": ["Do you like to dance", "Would you like to dance", "Do you like dance", "Would you like dancing"],
-    "answer": "Would you like to dance"
-  },
-  {
-    "level": "A2",
-    "question": "She is ______ her sister, I think.",
-    "options": ["more happier than", "more happy that", "happier that", "happier than"],
-    "answer": "happier than"
-  },
-  {
-    "level": "A2",
-    "question": "I couldn't eat ______ before the exam.",
-    "options": ["nothing", "anything", "everything", "something"],
-    "answer": "anything"
-  },
-  {
-    "level": "A2",
-    "question": "Please, pass me the remote. ______ TV.",
-    "options": ["I'm watching", "I will watch", "I'm going to watch", "I might watch"],
-    "answer": "I'm going to watch"
-  },
-  {
-    "level": "A2",
-    "question": "I'll call you when I ______ home.",
-    "options": ["arrive", "'m going to arrive", "will arrive", "arrived"],
-    "answer": "arrive"
-  },
-  {
-    "level": "A2",
-    "question": "______ Japan?",
-    "options": ["Have you ever gone in", "Do you have been in", "Have you ever been to", "Have you ever been into"],
-    "answer": "Have you ever been to"
-  },
-  {
-    "level": "A2",
-    "question": "He drives very ______.",
-    "options": ["slow", "slower", "more slowly", "slowly"],
-    "answer": "slowly"
-  },
-  {
-    "level": "B1",
-    "question": "Can you ______ the lights? I can't see.",
-    "options": ["open", "turn on", "start", "put on"],
-    "answer": "turn on"
-  },
-  {
-    "level": "B1",
-    "question": "We couldn't find a taxi, ______ we walked home.",
-    "options": ["so", "because", "but", "although"],
-    "answer": "so"
-  },
-  {
-    "level": "B1",
-    "question": "Tomorrow I ______ get up early; it's my day off.",
-    "options": ["mustn't", "must", "haven't to", "don't have to"],
-    "answer": "don't have to"
-  },
-  {
-    "level": "B1",
-    "question": "I ______ this coffee. It tastes horrible.",
-    "options": ["am not like", "don't like", "'m not liking", "not like"],
-    "answer": "don't like"
-  },
-  {
-    "level": "B1",
-    "question": "We ______ yesterday.",
-    "options": ["arrived", "did arrive", "have arrive", "have arrived"],
-    "answer": "arrived"
-  },
-  {
-    "level": "B1",
-    "question": "When I arrive home, I'm going to have a ______ bath.",
-    "options": ["relaxing", "relaxed", "relax", "relaxation"],
-    "answer": "relaxing"
-  },
-  {
-    "level": "B1",
-    "question": "A: 'We don't have any milk.'   B: 'Really? I ______ more.'",
-    "options": ["'m going to buy", "'ll buy", "'m buying", "buy"],
-    "answer": "'ll buy"
-  },
-  {
-    "level": "B1",
-    "question": "We ______ to seeing you next Thursday.",
-    "options": ["really want", "hope", "are looking forward", "really wish"],
-    "answer": "are looking forward"
-  },
-  {
-    "level": "B1",
-    "question": "I'd like to go ______ in the park.",
-    "options": ["to walking", "for walk", "for a walk", "to walk"],
-    "answer": "for a walk"
-  },
-  {
-    "level": "B1",
-    "question": "German ______ in Germany, Austria, and Switzerland.",
-    "options": ["is spoken", "spoken", "speaks", "is speak"],
-    "answer": "is spoken"
-  },
-  {
-    "level": "B1",
-    "question": "I ______ your book. It's fantastic. I'll finish it tonight.",
-    "options": ["'ve been reading", "read", "'ve read", "'m read"],
-    "answer": "'ve been reading"
-  },
-  {
-    "level": "B1",
-    "question": "He went on a business _____ to New York.",
-    "options": ["travel", "journey", "commute", "trip"],
-    "answer": "trip"
-  },
-  {
-    "level": "B1",
-    "question": "If I tell you a secret, ______ anyone?",
-    "options": ["are you tell", "do you tell", "will you tell", "are you telling"],
-    "answer": "will you tell"
-  },
-  {
-    "level": "B1",
-    "question": "My brother and I don't ______ very well.",
-    "options": ["get off", "get on", "go on", "break off"],
-    "answer": "get on"
-  },
-  {
-    "level": "B1",
-    "question": "I ______ fifty pages, but I have to read fifty more.",
-    "options": ["'ve been reading", "was reading", "'ve reading", "'ve read"],
-    "answer": "'ve read"
-  },
-  {
-    "level": "B2",
-    "question": "If I ______ you, I wouldn't do it.",
-    "options": ["was", "were", "would be", "am"],
-    "answer": "were"
-  },
-  {
-    "level": "B2",
-    "question": "This painting ______ a fortune.",
-    "options": ["is worth", "is value", "values", "worths"],
-    "answer": "is worth"
-  },
-  {
-    "level": "B2",
-    "question": "She is the same age ______ me.",
-    "options": ["than", "that", "what", "as"],
-    "answer": "as"
-  },
-  {
-    "level": "B2",
-    "question": "It's obvious that you...",
-    "options": ["don't drive as faster as me.", "drive faster than me.", "drive more fast than I.", "drive no faster than I."],
-    "answer": "drive faster than me."
-  },
-  {
-    "level": "B2",
-    "question": "The boat sank, but they ______ swim to the shore.",
-    "options": ["could", "were able to", "can", "abled to"],
-    "answer": "were able to"
-  },
-  {
-    "level": "B2",
-    "question": "If I had known that she was there, I ______ hello.",
-    "options": ["would say", "said", "had said", "would have said"],
-    "answer": "would have said"
-  },
-  {
-    "level": "B2",
-    "question": "I think he ______ in prison for what he did.",
-    "options": ["should put", "could been put", "should be put", "could put"],
-    "answer": "should be put"
-  },
-  {
-    "level": "B2",
-    "question": "He ______ him with his homework.",
-    "options": ["told me to help", "said me that I help", "said me I help", "told me that I help"],
-    "answer": "told me to help"
-  },
-  {
-    "level": "B2",
-    "question": "We ______. We hired a very good interior designer.",
-    "options": ["redecorated the kitchen", "had redecorated the kitchen", "got redecorated the kitchen", "had the kitchen redecorated"],
-    "answer": "had the kitchen redecorated"
-  },
-  {
-    "level": "B2",
-    "question": "A: 'I had a sauna yesterday'   B: '___ ? That's great.'",
-    "options": ["Did you", "You did", "Had you", "Didn't you"],
-    "answer": "Did you"
-  },
-  {
-    "level": "B2",
-    "question": "I wonder ______ at the party.",
-    "options": ["who was she talking", "who she was talking to", "who was she talking to", "who she was talking"],
-    "answer": "who she was talking to"
-  },
-  {
-    "level": "B2",
-    "question": "Which is correct?",
-    "options": ["How older people are, wiser they become", "If older people are, wiser they become", "The more old the people, the more wise", "The older people are, the wiser they become"],
-    "answer": "The older people are, the wiser they become"
-  },
-  {
-    "level": "B2",
-    "question": "I bought a ______ jacket.",
-    "options": ["nice red leather", "leather nice red", "red nice leather", "red leather nice"],
-    "answer": "nice red leather"
-  },
-  {
-    "level": "B2",
-    "question": "By 2025 we ______ the cure for type 1 diabetes.",
-    "options": ["will be discovering", "are discovering", "are going to be discovering", "will have discovered"],
-    "answer": "will have discovered"
-  },
-  {
-    "level": "B2",
-    "question": "The building ______.",
-    "options": ["was damaged badly in the hurricane last year", "was badly damaged last year in the hurricane", "was badly damaged in the hurricane last year", "last year was damaged badly in the hurricane"],
-    "answer": "was badly damaged in the hurricane last year"
-  },
-  {
-    "level": "B2",
-    "question": "If only he ______ doing that. It's so annoying!",
-    "options": ["had stopped", "would stop", "would have stopped", "stopped"],
-    "answer": "would stop"
-  },
-  {
-    "level": "B2",
-    "question": "If my parents hadn't met, I ______ here now.",
-    "options": ["wouldn't be", "wouldn't have been", "hadn't been", "weren't"],
-    "answer": "wouldn't be"
-  },
-  {
-    "level": "B2",
-    "question": "I like the job, but I think it'll be difficult to ______ nights.",
-    "options": ["be used to working", "uses to work", "get used to working", "get used to work"],
-    "answer": "get used to working"
-  },
-  {
-    "level": "B2",
-    "question": "You ______ me immediately. Now it's too late.",
-    "options": ["had told", "would have told", "should tell", "should have told"],
-    "answer": "should have told"
-  },
-  {
-    "level": "B2",
-    "question": "Not only ______ you, but he also lied to you.",
-    "options": ["did he disrespect", "he disrespected", "he did disrespect", "he has disrespected"],
-    "answer": "did he disrespect"
-  },
-  {
-    "level": "B2",
-    "question": "______ should be angry, not you.",
-    "options": ["It's me who", "It's I", "Who", "There's me who"],
-    "answer": "It's I"
-  },
-  {
-    "level": "B2",
-    "question": "I ______ you, but I forgot.",
-    "options": ["would tell", "was telling", "will tell", "was going to tell"],
-    "answer": "was going to tell"
-  },
-  {
-    "level": "B2",
-    "question": "It's ______ to Paris.",
-    "options": ["a two hours journey", "two hours' journey", "a two hour's journey", "a two-hours journey"],
-    "answer": "two hours' journey"
-  },
-  {
-    "level": "B2",
-    "question": "They _____ to arrive next Friday.",
-    "options": ["are set", "are on the verge", "are due", "are on the brink"],
-    "answer": "are due"
-  },
-  {
-    "level": "B2",
-    "question": "I didn't want to do it in the past, but now I ______.",
-    "options": ["would want", "'m wanting to", "want", "want to"],
-    "answer": "want to"
-  }
-]
+      {
+        "level":"Daraja testi",
+        "question": "______ a fluent speaker of English?",
+        "options": [
+           "Is her",
+           "He",
+           "Does she",
+           "Is she"
+        ],
+        "answer": "Is she"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "This is a desk, and ______ tables?",
+        "options": [
+           "those are",
+           "these",
+           "that are",
+           "that is"
+        ],
+        "answer": "those are"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "This is ______ boyfriend?",
+        "options": [
+           "hers",
+           "of her",
+           "to him",
+           "her"
+        ],
+        "answer": "her"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "There are ______ people in the office.",
+        "options": [
+           "the",
+           "little",
+           "some",
+           "any"
+        ],
+        "answer": "some"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "______ money on Helen's table?",
+        "options": [
+           "There is some",
+           "There is any",
+           "Is it some",
+           "Is there any"
+        ],
+        "answer": "Is there any"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "A: Where’s Helen? B: She ______ in the office.",
+        "options": [
+           "is sitting",
+           "sit",
+           "sitting",
+           "sits"
+        ],
+        "answer": "is sitting"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "She ______ French and English, so she has got a good job.",
+        "options": [
+           "speak",
+           "speaks",
+           "speaking",
+           "is speaking"
+        ],
+        "answer": "speaks"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "A: What _____ ? B: She is writing a letter.",
+        "options": [
+           "does she do",
+           "does she",
+           "is she doing",
+           "she is doing"
+        ],
+        "answer": "is she doing"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "She ______ speaks no foreign languages.",
+        "options": [
+           "is not",
+           "___",
+           "doesn’t",
+           "don’t"
+        ],
+        "answer": "doesn’t"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "A: Are Peter and Mary still sitting in the office? B: No, _____",
+        "options": [
+           "they don’t sit",
+           "they standing",
+           "there aren’t",
+           "they aren’t"
+        ],
+        "answer": "they aren’t"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "What language _____?",
+        "options": [
+           "do you speak",
+           "you speak",
+           "you are speaking",
+           "speak you"
+        ],
+        "answer": "do you speak"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "A: Are there any people in the bar? B: No, ______",
+        "options": [
+           "any",
+           "there aren’t",
+           "there isn’t",
+           "are there"
+        ],
+        "answer": "there aren’t"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Helen has got only ______ money.",
+        "options": [
+           "any",
+           "a little",
+           "no",
+           "few"
+        ],
+        "answer": "a little"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "A: Do you want some tea? B: No, I don’t want _____ thank you.",
+        "options": [
+           "nothing",
+           "none",
+           "anything",
+           "something"
+        ],
+        "answer": "anything"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "I’m sorry, but I ______ the test yet.",
+        "options": [
+           "don’t finish",
+           "haven’t finished",
+           "didn’t finish",
+           "aren’t finished"
+        ],
+        "answer": "haven’t finished"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "______ English before?",
+        "options": [
+           "Have you",
+           "Do you study",
+           "Are you studying",
+           "Have you studied"
+        ],
+        "answer": "Have you studied"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Marry ______ to the bank on Monday.",
+        "options": [
+           "go",
+           "going",
+           "gone",
+           "went"
+        ],
+        "answer": "went"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Marry ______ hasn’t telephoned Peter.",
+        "options": [
+           "yet",
+           "still",
+           "always",
+           "never"
+        ],
+        "answer": "yet"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Peter ______ in the living room when the phone rang.",
+        "options": [
+           "was sitting",
+           "has been sitting",
+           "at",
+           "has she wanted"
+        ],
+        "answer": "was sitting"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "A: What ______? B: She wanted to talk to him.",
+        "options": [
+           "wanted she",
+           "did she want",
+           "she wanted",
+           "has she wanted"
+        ],
+        "answer": "did she want"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Peter can’t speak Italian, ______?",
+        "options": [
+           "isn’t",
+           "can’t he",
+           "does he",
+           "can he"
+        ],
+        "answer": "can he"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Jack ______ Turkish soon.",
+        "options": [
+           "goes to learn",
+           "learns",
+           "is going to learn",
+           "is learning"
+        ],
+        "answer": "is going to learn"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "He asked her friend to speak ______ on the telephone.",
+        "options": [
+           "clear",
+           "more clearly",
+           "very clear",
+           "too clearly"
+        ],
+        "answer": "more clearly"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "“What ______ this evening?” Marry asked.",
+        "options": [
+           "you will do",
+           "do you",
+           "very clear",
+           "are you doing"
+        ],
+        "answer": "are you doing"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "She enjoys ______ to parties.",
+        "options": [
+           "to go",
+           "that they go",
+           "going",
+           "go"
+        ],
+        "answer": "going"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "His girlfriend _______ while he was still having a bath.",
+        "options": [
+           "was arriving",
+           "has arrived",
+           "arrived",
+           "is arriving"
+        ],
+        "answer": "arrived"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "“If I _______ quickly, we won’t be late for the party,” said Peter.",
+        "options": [
+           "drive",
+           "will drive",
+           "drove",
+           "would drive"
+        ],
+        "answer": "drive"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "She asked him where ______.",
+        "options": [
+           "the party is",
+           "the party was",
+           "was the party",
+           "is the party"
+        ],
+        "answer": "the party was"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "“If I _____ the way to the house, we wouldn’t be so late.” He replied.",
+        "options": [
+           "knew",
+           "know",
+           "would know",
+           "had know"
+        ],
+        "answer": "knew"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Peter wanted ______ a policeman.",
+        "options": [
+           "that Mary would ask",
+           "Mary asking",
+           "Mary should ask",
+           "Mary to ask"
+        ],
+        "answer": "Mary to ask"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Marry said she _____ him driving fast, and asked him to slow down.",
+        "options": [
+           "isn’t liking",
+           "hasn’t liking",
+           "didn’t like",
+           "doesn’t like"
+        ],
+        "answer": "didn’t like"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "When they finally arrived, they _____ the car and went in.",
+        "options": [
+           "had parked",
+           "were parking",
+           "parked",
+           "have parked"
+        ],
+        "answer": "parked"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "They were _____ that they didn’t get anything to eat.",
+        "options": [
+           "such late",
+           "so late",
+           "too late",
+           "very late"
+        ],
+        "answer": "so late"
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Peter made Mary _____ all night.",
+        "options": [
+           "to dance",
+           "that she danced",
+           "dance",
+           "dancing"
+        ],
+        "answer": "dance"
+      },
+      {
+        "level":"Daraja testi",
+        "question": " Text: \n In an interview yesterday Mr. Wilson was questioned about the harmful effects of horror movies on teenagers. He argued that such effects were often exaggerated and claimed that other types of films were far more dangerous for young people. When asked to prove this, he pointed out that horror films were often set in unreal situations and were clearly not to be taken seriously. In contrast, he claimed that films showing violent crime were often set in everyday life, and were therefore more damaging. \n In Mr. Wilson’s opinion, horror films _____.",
+        "options": [
+           "cost more than other kinds of films.",
+           "are more popular among the elderly than among the young.",
+           "should be banned altogether.",
+           "are less damaging to young people than films of violent crime.",
+         "have recently ceased to appeal to the young."
+        ],
+        "answer": "are less damaging to young people than films of violent crime."
+      },
+      {
+        "level":"Daraja testi",
+        "question": "Text: \n  In an interview yesterday Mr. Wilson was questioned about the harmful effects of horror movies on teenagers. He argued that such effects were often exaggerated and claimed that other types of films were far more dangerous for young people. When asked to prove this, he pointed out that horror films were often set in unreal situations and were clearly not to be taken seriously. In contrast, he claimed that films showing violent crime were often set in everyday life, and were therefore more damaging. \n For Mr. Wilson the main difference between a horror film and one showing violent crime is that the former _____.",
+        "options": [
+           "is mainly concerned with everyday situations.",
+           "is liked by the young, and the latter by the old.",
+           "is unrelated to real life, whereas the latter is.",
+           "is less expensive to produce than the latter.",
+         "rarely receives any attention from the young."
+        ],
+        "answer": "is unrelated to real life, whereas the latter is."
+      }
+    ]
+

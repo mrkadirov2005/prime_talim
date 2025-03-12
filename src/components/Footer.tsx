@@ -6,7 +6,7 @@ export default function Footer() {
   const links=["https://instagram.com","https://facebook.com","https://t.me/primestudy_in_urgut","https://youtube.com"]
   return (
     <motion.footer
-      className="bg-gradient-to-tr pt-20 from-blue-600 to-blue-900 text-white w-full py-12 px-6 sm:px-20 flex flex-wrap justify-between items-center shadow-lg shadow-blue-900/40"
+      className="bg-gradient-to-tr pt-20 from-blue-500 to-orange-900 hover:bg-gradient-to-br text-white w-full py-12 px-6 sm:px-20 flex flex-wrap justify-between items-center shadow-lg shadow-blue-900/40"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

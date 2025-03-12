@@ -64,7 +64,7 @@ const [isSent,setIsSent]=useState<boolean>();
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10 rounded-md"></div>
         <motion.h1 variants={slideUp} className="relative text-white text-3xl md:text-6xl font-extrabold drop-shadow-lg text-center">
-          Prime Ta'limga xush kelibsiz!
+        Ilm ummoniga sayohat
         </motion.h1>
         <motion.p variants={slideUp} className="relative text-white text-lg md:text-2xl w-[90%] md:w-[70%] text-center drop-shadow-md">
           Prime Ta'lim 2015 yildan buyon o'quvchilarga sifatli ta'lim berib kelmoqda.
@@ -83,11 +83,11 @@ const [isSent,setIsSent]=useState<boolean>();
         </motion.h1>
         <motion.div variants={staggerContainer} className="flex md:flex-wrap  w-[90%] pt-10">
             <motion.div variants={slideUp} className="flex justify-center gap-5 md:justify-between w-full flex-wrap">
-              <Card source="/reading.svg" field={"O'quvchilar"} number={700} />
+              <Card source="/reading.svg" field={"O'quvchilar"} number={1000} />
               <Card source="/reading.svg" field={"Ustozlar"} number={20} />
-              <Card source="/reading.svg" field={"IELTS"} number={30} />
+              <Card source="/reading.svg" field={"IELTS"} number={50} />
               <Card source="/reading.svg" field={"CEFR"} number={50} />
-              <Card source="/reading.svg" field={"OTM"} number={50} />
+              <Card source="/reading.svg" field={"OTM"} number={200} />
             </motion.div>
         </motion.div>
       </motion.section>
@@ -100,6 +100,12 @@ const [isSent,setIsSent]=useState<boolean>();
         <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-5 w-[90%] bg-orange-200 p-6 md:p-10 rounded-md">
           {[
             { heading: "Joylashuv", data: "Qulay joylashuv" },
+            { heading: "Aloqa", data: "ota onalar bilan muntazam aloqa" },
+            { heading: "Imtihonlar", data: "Imtihondan yiqilganlar qaytadan pastgi guruhlarga tushurish" },
+            { heading: "Hamkorlarimiz", data: "Fast Education" },
+            { heading: "Hamkorlarimiz", data: "Elita akademik Maktabi" },
+            { heading: "Hamkorlarimiz", data: "Prime Study Toshkent bosh office" },
+            { heading: "Hamkorlarimiz", data: "Perfect Education(Bulung'ur)" },
             { heading: "Ustozlar", data: "Yuqori malakali o'qituvchilar" },
             { heading: "Sifat", data: "Yuqori sifat va natija ustuvorligi" },
             { heading: "O'quv tizimi", data: "Cambridge standartlari asosida" },
@@ -122,14 +128,15 @@ const [isSent,setIsSent]=useState<boolean>();
           {[
             { classs: "Ingliz tili", type: "language" },
             { classs: "Rus tili", type: "language" },
-            { classs: "Koreys tili", type: "language" },
             { classs: "Arab tili", type: "language" },
             { classs: "Ona tili va Adabiyot", type: "language" },
-            { classs: "Matematika", type: "math" },
-            { classs: "Dasturlash", type: "code" },
+            { classs: "Biologiya", type: "math" },
+            { classs: "Kimyo", type: "math" },
+            { classs: "Nemis tili", type: "math" },
+            { classs: "Uy hamshirasi kursi", type: "math" },
           ].map((item, index) => (
             <motion.div key={index} className="m-auto" variants={slideUp}>
-              <Class classs={item.classs} type={item.type} />
+            <a href="/courses">  <Class classs={item.classs} type={item.type} /></a>
             </motion.div>
           ))}
         </motion.div>
