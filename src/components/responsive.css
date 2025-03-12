@@ -5,13 +5,31 @@
     border-radius:5px;
 }
 @media only screen and (max-width: 1000px) {
+    .footer_site{
+        padding-top: 50px;
+    }
+    nav{
+        width: 50% !important;
+    }
     header{
         padding: 25px;
         margin: 0;
         display: flex;
         width: 100%;
     }
+    .contact_wrapper{
+        padding: 5px !important;
+        margin: 5 !important;
+        margin-left: 15px;
+    }
+    .contact{
+        font-size: 8px;
+
+    }
     
+    .header_link_items{
+        font-size: 12px;
+    }
     .header_nav{
         display: none;
         font-size: 8px;
@@ -25,9 +43,7 @@
     .nav_wrapper{
         width: 60%;
     }
-    .header_links{
-        font-size: 12px;
-    }
+    
     #header_buttons{
         display: flex;
         flex-direction: column;
