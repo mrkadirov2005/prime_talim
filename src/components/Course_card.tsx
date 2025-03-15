@@ -5,14 +5,14 @@ import "./responsive.css";
 interface PROPS {
   name: string;
   description: string;
-  price: string;
+  // price: string;
   teacher: string;
   levels: string[];
   index: number;
 }
 
 
-export default function Course_card({ name, description, price, teacher, levels, index }: PROPS) {
+export default function Course_card({ name, description,  teacher, levels, index }: PROPS) {
   return (
     <motion.div
       id={`${index}`}
@@ -25,7 +25,7 @@ export default function Course_card({ name, description, price, teacher, levels,
       <h1 className="w-full text-left text-2xl border-b-4 border-gray-800 p-2 font-semibold">
         {index + 1}. {name}
       </h1>
-      <span className="text-xl border-b-4 border-gray-800 font-medium">Narx: {price}</span>
+      {/* <span className="text-xl border-b-4 border-gray-800 font-medium">Narx: {price}</span> */}
       <p className="w-[300px] course_card_description border-b-4 border-gray-800 pb-2 h-fit text-lg text-wrap flex flex-wrap">
         Tavsifi: {description}
       </p>

@@ -13,6 +13,7 @@ export interface TEACHER {
   "Pedagogik Tajriba": string;
   Yutuqlar: string;
 }
+// Nurullayeva Chinora	88 934 28 89	Ingliz tili CEFR		21.08.1993	SamDCHTI	Elita akademik maktabi, Prime Study o'quv markazi 	7 YIL 	CEFR B2
 
 const teachers: TEACHER[] = [
   {
@@ -70,11 +71,24 @@ const teachers: TEACHER[] = [
     Lavozim: "Ingliz tili",
     Rasm: "/lobar.jpg",
     "Tug'ilgan yili": "22.03.1997",
+    "O'qigan Joyi": "SamDCHTI",
+    "Ish Tajribasi":
+      "Elita akademik maktabi, Prime Study o'quv markazi",
+    "Pedagogik Tajriba": "7 yil",
+    Yutuqlar: "",
+  },
+  {
+    No: 20,
+    Ismlar: "Nurullayeva Chinora",
+    Telefon: "88 934 28 89",
+    Lavozim: "Ingliz tili",
+    Rasm: "/chinora.JPG",
+    "Tug'ilgan yili": "21.08.1993",
     "O'qigan Joyi": "SamDCHTI, Silk Road",
     "Ish Tajribasi":
       "“Creativa Academy” o’quv markazi, 26-IDUM, “Elita” akademik maktabi, Prime Study o'quv markazi",
     "Pedagogik Tajriba": "6 yil",
-    Yutuqlar: "",
+    Yutuqlar: "CEFR B2",
   },
   {
     No: 7,

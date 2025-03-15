@@ -8,6 +8,7 @@ import AboutUs from "./pages/AboutUs";
 import VCourses from "./pages/VCourses";
 import Courses from "./pages/Courses";
 import SEB from "./pages/SEB";
+import Contact from "./components/Contact";
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/videos" element={<VCourses />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/test" element={<Test />} />
         </Routes>
       </main>

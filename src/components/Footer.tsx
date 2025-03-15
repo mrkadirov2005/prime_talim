@@ -84,7 +84,7 @@ export default function Footer() {
         <div className="flex space-x-4">
           
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Button variant="contained" sx={{ backgroundColor: "#1E40AF" }} ><a href="#contact">Aloqaga Chiqish</a></Button>
+            <Button variant="contained" sx={{ backgroundColor: "#1E40AF" }} ><a href="/contact">Aloqaga Chiqish</a></Button>
           </motion.div>
         </div>
       </motion.div>

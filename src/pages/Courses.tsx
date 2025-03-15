@@ -113,7 +113,7 @@ export default function Courses() {
               description={item.description}
               index={index}
               levels={item.levels}
-              price={item.price}
+              // price={item.price}
               teacher={item.teacher}
             />
           </motion.div>
