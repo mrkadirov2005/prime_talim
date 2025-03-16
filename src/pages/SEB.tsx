@@ -10,13 +10,36 @@ import Math_test from "./tests/Math.json";
 import biology from "./tests/biology.json";
 import chemistry from "./tests/chemistry.json";
 import { Button, Select, MenuItem, TextField, Card, CardContent } from "@mui/material";
+interface PROPS {
+  subject: string;
+  result: number; // Fixing "Number" to "number"
+}
 
+function SpecifyResults({ subject, result }: PROPS): string {
+  if (subject === "english") {
+    if (result < 5) {
+      return "A1";
+    } else if (result < 15) {
+      return "A2";
+    } else if (result < 24) {
+      return "B1";
+    } else if (result < 30) {
+      return "B2";
+    } else {
+      return "C1";
+    }
+  }
+  return "Aniqlanmagan"; // Handling case where subject is not "english"
+}
+
+// Interface for quiz items
 interface ITEM {
   level: string;
   question: string;
   options: string[];
   answer: string;
 }
+
 
 const testOptions: Record<string, ITEM[]> = {
   english: english_test,
@@ -147,9 +170,14 @@ export default function SEB() {
         )}
       
         {showResults && (
-          <div className="mt-6 text-center text-white text-xl font-bold">
-            Your Score: {corrects} / {tests.length}
-            <Button
+          <div className=" text-center gap-2 text-white text-xl font-bold min-h-screen min-w-screen fixed top-0 bg-white mt-[-100]  flex items-center justify-center flex-col left-0">
+            <div className="w-[400px] gap-2 bg-green-400 p-5 rounded-md hover:scale-105 hover:bg-green-700 flex flex-col">
+            <div className="bg-orange-400 p-2 rounded-md">{corrects>(tests.length/2)?"wow,":"Hmm,"}{userData.ismingiz} {userData.familiyangiz}</div>
+            <h1 className="w-full bg-orange-600">Sizning balingiz: {corrects} / {tests.length}</h1>
+
+            <Button color="secondary" title={corrects>tests.length/2?"Good":"You have work hard man!"} variant="contained">Sizning darajangiz__<Button color="primary" variant="contained" className=""> {option=="english"?(corrects<5?"A1":corrects<14?"A2":corrects<24?"B1":corrects<30?"B2":"C1"):(corrects<(tests.length/4)?"A1":corrects<((tests.length/4)*2)?"A2":corrects<((tests.length/4)*3)?"B1":"B2")}</Button></Button>
+            
+          <div className="flex flex-wrap">  <Button
               variant="contained"
               color="secondary"
               fullWidth
@@ -160,7 +188,8 @@ export default function SEB() {
             </Button>
             <a href="/" className="mt-2 !rounded-md bg-blue-500 p-2">
               Asosiyga qaytish
-            </a>
+            </a></div>
+            </div>
           </div>
         )}
       </section>

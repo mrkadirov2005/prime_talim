@@ -34,7 +34,7 @@ export default function Footer() {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <nav className="flex flex-col items-center  justify-center  space-y-3 text-lg font-semibold w-full ">
-          {["Asosiy", "Kurslar", "Videolar", "Testlar"].map((label, index) => (
+          {["Home", "Courses",  "Test"].map((label, index) => (
             <motion.div key={label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full flex items-center justify-center">
               <Link
                 className="py-2 px-4  border-b-2 border-blue-400 hover:text-gray-300 transition"

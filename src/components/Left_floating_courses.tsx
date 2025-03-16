@@ -4,7 +4,6 @@ export interface PROPS {
   name: string;
   description: string;
   levels: string[];
-  price: string;
   teacher: string;
   key: number;
 }
@@ -13,7 +12,6 @@ export default function LeftFloatingCourses({
   levels,
   name,
   description,
-  price,
   teacher,
 }: PROPS) {
   return (
@@ -24,9 +22,7 @@ export default function LeftFloatingCourses({
       <Typography variant="body2" className="text-gray-600">
         {description}
       </Typography>
-      <Typography variant="h6" className="text-green-600 font-semibold">
-        {price}
-      </Typography>
+    
       <Typography variant="body1" className="font-medium">
         Instructor: {teacher}
       </Typography>

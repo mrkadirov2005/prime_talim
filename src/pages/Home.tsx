@@ -5,6 +5,7 @@ import Item_Card from "../components/Item_Card";
 import Class from "../components/Class";
 import AboutUs from "./AboutUs";
 import { useState } from "react";
+import Item_Card_2 from "../components/Item_Card_2";
 
 // Variants for animations
 const fadeIn = {
@@ -67,7 +68,7 @@ const [isSent,setIsSent]=useState<boolean>();
         Ilm ummoniga sayohat
         </motion.h1>
         <motion.p variants={slideUp} className="relative text-white text-lg md:text-2xl w-[90%] md:w-[70%] text-center drop-shadow-md">
-          Prime Ta'lim 2015 yildan buyon o'quvchilarga sifatli ta'lim berib kelmoqda.
+          Prime Ta'lim 2013 yildan buyon o'quvchilarga sifatli ta'lim berib kelmoqda.
         </motion.p>
         <motion.div variants={slideUp}>
           <Button variant="contained" color="warning" className="relative hover:scale-110 transition-transform">
@@ -87,6 +88,7 @@ const [isSent,setIsSent]=useState<boolean>();
               <Card source="/reading.svg" field={"Ustozlar"} number={20} />
               <Card source="/reading.svg" field={"IELTS"} number={50} />
               <Card source="/reading.svg" field={"CEFR"} number={50} />
+              <Card source="/reading.svg" field={"Xorijiy OTM"} number={10} />
               <Card source="/reading.svg" field={"OTM"} number={200} />
             </motion.div>
         </motion.div>
@@ -97,16 +99,12 @@ const [isSent,setIsSent]=useState<boolean>();
         <motion.h1 variants={slideUp} className="text-center font-bold text-orange-700 text-2xl md:text-4xl uppercase">
           Bizning Qulayliklarimiz
         </motion.h1>
-        <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-5 w-[90%] bg-orange-200 p-6 md:p-10 rounded-md">
+        <motion.div variants={staggerContainer} className="flex flex-wrap items-center justify-center gap-5 w-[90%] bg-orange-200 p-6 md:p-10 rounded-md">
           {[
             { heading: "Joylashuv", data: "Qulay joylashuv" },
             { heading: "Aloqa", data: "ota onalar bilan muntazam aloqa" },
             { heading: "Imtihonlar", data: "Imtihondan yiqilganlar qaytadan pastgi guruhlarga tushurish" },
-            { heading: "Hamkorlarimiz", data: "Fast Education" },
-            { heading: "Hamkorlarimiz", data: "Elita akademik Maktabi" },
-            { heading: "Hamkorlarimiz", data: "Prime Study Toshkent bosh office" },
-            { heading: "Hamkorlarimiz", data: "Perfect Education(Bulung'ur)" },
-            { heading: "Ustozlar", data: "Yuqori malakali o'qituvchilar" },
+                      { heading: "Ustozlar", data: "Yuqori malakali o'qituvchilar" },
             { heading: "Sifat", data: "Yuqori sifat va natija ustuvorligi" },
             { heading: "O'quv tizimi", data: "Cambridge standartlari asosida" },
             { heading: "Sinov Imtihonlari", data: "Har darajadan so'ng testlar" },
@@ -116,8 +114,22 @@ const [isSent,setIsSent]=useState<boolean>();
               <Item_Card heading={item.heading} data={item.data} />
             </motion.div>
           ))}
+         
         </motion.div>
       </motion.section>
+      <div className="w-[90%] hover:scale-105 hover:skew-x-2 m-auto flex flex-col p-8 rounded-md items-center justify-center bg-orange-400">
+          <h1 className="w-full m-auto bg-orange-500 text-center p-2 my-2 bg-gradient-to-r from-green-700 text-2xl to-blue-400 text-white shadow-2xl shadow-green-700">Hamkorlarimiz</h1>
+           <div className="w-full gap-x-9 gap-y-2 flex items-center flex-wrap  justify-center">
+            {
+              [
+                {  data: "Fast Education" },
+                {  data: "Elita akademik Maktabi" },
+                {  data: "Prime Study Toshkent bosh office" },
+                {  data: "Perfect Education(Bulung'ur)" },
+              ].map(item=><Item_Card_2 data={item.data}></Item_Card_2>)
+            }
+          </div>
+          </div>
 
       {/* Courses Section */}
       <motion.section variants={staggerContainer} className="py-10 flex flex-col items-center gap-6">
