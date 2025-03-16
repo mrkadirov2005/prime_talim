@@ -10,27 +10,8 @@ import Math_test from "./tests/Math.json";
 import biology from "./tests/biology.json";
 import chemistry from "./tests/chemistry.json";
 import { Button, Select, MenuItem, TextField, Card, CardContent } from "@mui/material";
-interface PROPS {
-  subject: string;
-  result: number; // Fixing "Number" to "number"
-}
 
-function SpecifyResults({ subject, result }: PROPS): string {
-  if (subject === "english") {
-    if (result < 5) {
-      return "A1";
-    } else if (result < 15) {
-      return "A2";
-    } else if (result < 24) {
-      return "B1";
-    } else if (result < 30) {
-      return "B2";
-    } else {
-      return "C1";
-    }
-  }
-  return "Aniqlanmagan"; // Handling case where subject is not "english"
-}
+
 
 // Interface for quiz items
 interface ITEM {
