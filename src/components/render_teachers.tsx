@@ -134,6 +134,7 @@ export const teachers: TEACHER[] = [
     "Ish Tajribasi": "Prime Study o'quv markazi",
     "Pedagogik Tajriba": "3 yil",
     Yutuqlar: "",
+    video:"https://youtube.com/embed/CNUru_-XtMA?si=nFfrseiEf93zBr6r"
   },
   {
     No: 15,
