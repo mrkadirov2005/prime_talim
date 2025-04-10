@@ -1,5 +1,6 @@
 import Video from "../components/Video";
 import "./responsive.css";
+import { teachers } from "../components/render_teachers";
 
 export default function VCourses() {
   return (
@@ -11,12 +12,12 @@ export default function VCourses() {
       
       {/* Video Container */}
       <div className="videos-container sm:flex-row pt-5 pb-10 flex items-center flex-wrap bg-gradient-to-br from-blue-500 to-violet-700 justify-around gap-10">
-        {Array(9).fill(0).map((_, index) => (
+        {teachers.map((_, index) => (
           <Video
+          teacher={_.Ismlar}
             key={index}
-            lesson="Kirish Darsi Ingliz tili"
-            src="https://youtu.be/-LgrMv4BDdY?si=r4QpFnOfJr3E0_cq"
-            teacher="Otabek Mahkamov"
+            lesson={_.Lavozim}
+            src={_.video}
           />
         ))}
       </div>
