@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { motion } from "framer-motion";
+import { FaPhone } from "react-icons/fa";
 
 export default function Footer() {
-  const links=["https://instagram.com","https://facebook.com","https://t.me/primestudy_in_urgut","https://youtube.com"]
+  const links=["https://www.instagram.com/primestudy_in_urgut","https://facebook.com","https://t.me/primestudy_in_urgut","https://www.youtube.com/@prime_talim"]
   return (
     <motion.footer
       className=" footer_site bg-gradient-to-tr pt-20 from-blue-500 to-orange-900 hover:bg-gradient-to-br text-white w-full py-12 px-6 sm:px-20 flex flex-wrap justify-between items-center shadow-lg shadow-blue-900/40"
@@ -24,6 +25,8 @@ export default function Footer() {
           <b>Prime Ta'lim</b> o'quv markazi Urgut viloyatida joylashgan bo'lib,
           <b> Mahmud G'afforov</b> tomonidan asos solingan va 10 yillik tajribaga ega.
         </p>
+        <div className="flex w-full justify-start gap-5 items-center"><FaPhone></FaPhone> <span> +998 95 412 60 60</span></div>
+        <div className="flex w-full justify-start gap-5 items-center"><b>@</b><span> primetalim@gmail.com</span></div>
       </motion.div>
 
       {/* Center Section - Navigation & Social Links */}
