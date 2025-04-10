@@ -41,7 +41,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="absolute top-20 left-0 w-full bg-orange-500 bg-opacity-90 rounded-b-xl shadow-lg shadow-blue-600 flex flex-col items-center gap-5 p-5 text-white font-semibold sm:hidden">
-          {["/", "/courses", "/test"].map((route,index) => (
+          {["/", "/courses","/videos", "/test"].map((route,index) => (
             <Link 
               key={route}
               className="border-b-2 border-white pb-1 w-full text-center transition-transform hover:scale-105"
