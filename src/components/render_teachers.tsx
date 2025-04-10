@@ -1,5 +1,5 @@
-import React from "react";
-import { Card, CardContent } from "@mui/material";
+import React, { useState } from "react";
+import {  Card, CardContent } from "@mui/material";
 
 export interface TEACHER {
   No: number;
@@ -12,10 +12,10 @@ export interface TEACHER {
   "Ish Tajribasi": string;
   "Pedagogik Tajriba": string;
   Yutuqlar: string;
+  video?:string;
 }
-// Nurullayeva Chinora	88 934 28 89	Ingliz tili CEFR		21.08.1993	SamDCHTI	Elita akademik maktabi, Prime Study o'quv markazi 	7 YIL 	CEFR B2
 
-const teachers: TEACHER[] = [
+export const teachers: TEACHER[] = [
   {
     No: 1,
     Ismlar: "G’afforov Mahmud",
@@ -27,6 +27,7 @@ const teachers: TEACHER[] = [
     "Ish Tajribasi": "Akademik Litsey, Prime Study o'quv markazi",
     "Pedagogik Tajriba": "16 yil",
     Yutuqlar: "CEFR C1",
+    video:"https://www.youtube.com/embed/2bzYTkyJ8PU?si=_T927WVb1iWcnw7o"
   },
   {
     No: 8,
@@ -39,6 +40,7 @@ const teachers: TEACHER[] = [
     "Ish Tajribasi": "54 va 123-maktab, Prime Study",
     "Pedagogik Tajriba": "25 yil",
     Yutuqlar: "IELTS 6.0",
+    video:"https://www.youtube.com/embed/1rZKiuApkDs?si=dgnBESbhfWAGdmFm"
   },
   {
     No: 13,
@@ -51,6 +53,7 @@ const teachers: TEACHER[] = [
     "Ish Tajribasi": "Prime Study o'quv markazi",
     "Pedagogik Tajriba": "5 yil",
     Yutuqlar: "",
+    video:'https://www.youtube.com/embed/Qpp1e2TGvl8?si=qkQKSt1fiNZa118Q'
   },
   {
     No: 5,
@@ -63,6 +66,7 @@ const teachers: TEACHER[] = [
     "Ish Tajribasi": "Niners Academy, Ixlos, Prime Study, elite academic school",
     "Pedagogik Tajriba": "3 yil",
     Yutuqlar: "CEFR C1",
+    video:"https://www.youtube.com/embed/bFZHromgnk8?si=ToqU9PRMfv0v-5Ok"
   },
   {
     No: 6,
@@ -76,6 +80,7 @@ const teachers: TEACHER[] = [
       "Elita akademik maktabi, Prime Study o'quv markazi",
     "Pedagogik Tajriba": "7 yil",
     Yutuqlar: "",
+    video:"https://www.youtube.com/embed/lRtM1v3-los?si=p7ye06-pPs24TtYe"
   },
   {
     No: 20,
@@ -89,6 +94,7 @@ const teachers: TEACHER[] = [
       "“Creativa Academy” o’quv markazi, 26-IDUM, “Elita” akademik maktabi, Prime Study o'quv markazi",
     "Pedagogik Tajriba": "6 yil",
     Yutuqlar: "CEFR B2",
+    video:"https://www.youtube.com/embed/r5BIor8BZzc?si=X-9M48uNpJ5bIhMt"
   },
   {
     No: 7,
@@ -101,6 +107,7 @@ const teachers: TEACHER[] = [
     "Ish Tajribasi": "Elita akademik maktabi, Prime Study o'quv markazi",
     "Pedagogik Tajriba": "3 yil",
     Yutuqlar: "IELTS 7.0",
+    video:"https://www.youtube.com/embed/rSXuNOP-inU?si=cSRIjmPa2zTK2T-B"
   },
   {
     No: 11,
@@ -114,6 +121,7 @@ const teachers: TEACHER[] = [
       "Al Aziz Academy NTM (oʻquv markazi), Elita Academic maktabi, Prime Study oʻquv markazi",
     "Pedagogik Tajriba": "2 yil",
     Yutuqlar: "CEFR C1",
+    video:"https://www.youtube.com/embed/TYD9s66Mx-4?si=xHqIoSvBP5WlcIoO"
   },
   {
     No: 14,
@@ -164,6 +172,7 @@ const teachers: TEACHER[] = [
       "Iqtisodiyot kolleji, 149-maktab, ELT maktabi",
     "Pedagogik Tajriba": "16 yil",
     Yutuqlar: "Triz pedagogikasi sertifikati, DTM-2024 matematikadan 40/40, 1-toifali o'qituvchi",
+    video:"https://www.youtube.com/embed/uYLAGChP674?si=XYG_4Klouki_gGeP" 
   },
   {
     No: 19,
@@ -176,6 +185,7 @@ const teachers: TEACHER[] = [
     "Ish Tajribasi": "Bilim Orzu, Cambridge, Prime ta’lim o'quv markazi",
     "Pedagogik Tajriba": "5 yil",
     Yutuqlar: "100 dan ortiq o'quvchisi talaba bo'lgan",
+    video:"https://www.youtube.com/embed/OZxTMNBg9t0?si=PPVq6e_RgsZWw7wW"
   },
   {
     No: 20,
@@ -188,11 +198,13 @@ const teachers: TEACHER[] = [
     "Ish Tajribasi": "Prime Study o'quv markazi",
     "Pedagogik Tajriba": "3 yil",
     Yutuqlar: "50 nafar o'quvchisi talaba bo'lgan",
+    video:"https://www.youtube.com/embed/klQciE3pvSg?si=J1m7h5kh_oyxtWnY"
   },
   
 ];
 
 const TeacherCard: React.FC<{ teacher: TEACHER }> = ({ teacher }) => {
+  const [isDemo,setIsDemo]=useState<boolean>(false);
   return (
     <Card className="w-80  hover:scale-105 hover:bg-blue-500 rounded-2xl shadow-lg h-fit pt-0 ">
       <CardContent className="flex flex-col items-center hover:bg-gradient-to-br from-orange-400 to-blue-400">
@@ -205,6 +217,8 @@ const TeacherCard: React.FC<{ teacher: TEACHER }> = ({ teacher }) => {
         {teacher.Yutuqlar && (
           <p className="mt-2 bg-green-500 text-white p-1 rounded-lg">🏆 {teacher.Yutuqlar}</p>
         )}
+      {teacher.video?  <button  className="p-2 m-2 bg-green-700 text-white rounded-md hover:bg-violet-300" onClick={()=>setIsDemo(!isDemo)} >{isDemo?"Yopish":"Demo darsni ko'rish"}</button>:""}
+      {isDemo?<iframe title={teacher.Ismlar} className="full p-2 m-2 rounded-md" src={teacher.video} allowFullScreen></iframe>:""}
       </CardContent>
     </Card>
   );
