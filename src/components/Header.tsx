@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi"; // Import hamburger & close icons
 
 export default function Header() {
-  const links=["Asosiy","Kurslar","Sinov Testlar"]
+  const links=["Asosiy","Kurslar","Demo Darslar","Sinov Testlar"]
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ export default function Header() {
 
       {/* Desktop Navigation */}
       <nav className="hidden sm:flex sm:w-[60%] items-center sm:text-sm md:text-lg justify-between uppercase text-white font-semibold">
-        {["/", "/courses", "/test"].map((route,index) => (
+        {["/", "/courses","/videos", "/test"].map((route,index) => (
           <Link
             key={route}
             className="transition-transform header_link_items hover:scale-110 hover:text-gray-200 duration-200"
@@ -27,7 +27,6 @@ export default function Header() {
 
       {/* Buttons (Hidden on mobile) */}
       <div className="hidden sm:flex w-[15%] items-center justify-between">
-        {/* <Button variant="contained" color="primary" className="hover:scale-110 transition-transform">Login</Button> */}
         <Button variant="contained" color="error" className="contact_wrapper hover:scale-110 transition-transform"><a className="contact" href="/contact">Aloqaga chiqish</a></Button>
       </div>
 
