@@ -22,7 +22,7 @@ export default function Footer() {
       >
         <img src="/logo.png" className="w-28" alt="Logo" />
         <p className="text-lg max-w-sm leading-relaxed">
-          <b>Prime Ta'lim</b> o'quv markazi Urgut viloyatida joylashgan bo'lib,
+          <b>Prime Ta'lim</b> o'quv markazi Samarqand viloyati, Urgut tumanida joylashgan bo'lib,
           <b> Mahmud G'afforov</b> tomonidan asos solingan va 10 yillik tajribaga ega.
         </p>
         <div className="flex w-full justify-start gap-5 items-center"><FaPhone></FaPhone> <span> +998 95 412 60 60</span></div>
