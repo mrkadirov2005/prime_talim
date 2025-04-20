@@ -149,6 +149,7 @@ export const teachers: TEACHER[] = [
     Yutuqlar:
       "2016-yil “Navoiy nomidagi davlat stipendiyasi” sovrindori, 2 ta kitob, 1 ta to‘plam muallifi, 40+ milliy maqolalar, 10+ xalqaro maqolalar, Magistr darajasi",
   },
+  video:src="https://www.youtube.com/embed/k2xL0ShK7Sg?si=IaUVRqEIoceRQTzi" 
   {
     No: 17,
     Ismlar: "Ibodullayev Sherali",
